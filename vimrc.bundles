@@ -28,13 +28,12 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'wakatime/vim-wakatime'
 
 " 彩虹括号
-Plug 'MikeCoder/rainbow'
+Plug 'MVIM/rainbow'
 
 "minibufferexpl 去掉
 Plug 'fholgado/minibufexpl.vim'
 
 " Go 加强
-Plug 'cespare/vim-golang'
 Plug 'dgryski/vim-godef'
 Plug 'Blackrush/vim-gocode'
 

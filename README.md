@@ -45,6 +45,8 @@ npm install jslint -g
 
 *Sorry, I have no other device to test centos or other release version of Linux or Windows*
 
+###Usage
+See @[Usage.md](./doc/Usage.md)
 
 ###TODO
 See @[TODO.md](./TODO.md)
