@@ -1,0 +1,96 @@
+snippet cmp
+int cmp(const void* a, const void* b) {
+    return *(int*)a - *(int*)b;
+}
+endsnippet
+
+snippet r
+return ${1};
+endsnippet
+
+snippet linuxc
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <ctype.h>
+#include <errno.h>
+#include <float.h>
+#include <iso646.h>
+#include <limits.h>
+#include <locale.h>
+#include <math.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <wchar.h>
+#include <wctype.h>
+
+int main(int argc, char *argv[]) {
+${1}
+	return 0;
+}
+endsnippet
+
+snippet acm
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+#include <cmath>
+#include <iostream>
+#include <sstream>
+#include <algorithm>
+#include <vector>
+#include <set>
+#include <map>
+#include <bitset>
+#include <stack>
+#include <string>
+#include <queue>
+#include <list>
+#include <iomanip>
+#include <limits>
+#include <typeinfo>
+#include <functional>
+#include <numeric>
+#include <complex>
+
+using namespace std;
+
+${1}
+
+int main() {
+	return 0;
+}
+endsnippet
+
+snippet while
+while (${1}) {
+	${2}
+}
+endsnippet
+
+snippet fori
+for (int i = 0; i < ${1}; i++) {
+	${2}
+}
+endsnippet
+
+snippet in
+cin>>${1}>>${2};
+endsnippet
+
+snippet out
+cout<<${1}<<endl;
+endsnippet
+
+snippet if
+if (${1}) {
+	${2}
+}
+endsnippet
