@@ -1,6 +1,8 @@
 m-vim.vimrc
 ---
 
+[![GitHub version](https://badge.fury.io/gh/MikeCoder%2Fm-vim.vimrc.svg)](https://badge.fury.io/gh/MikeCoder%2Fm-vim.vimrc)
+
 Yet, just another vim config project.
 
 This is the vim config project which fits myself. Hope you will like it.
