@@ -44,6 +44,7 @@ brew install node
 npm install jshint -g
 npm install jslint -g
 ```
+####Then use sh install.sh it will auto-install.
 
 *Sorry, I have no other device to test centos or other release version of Linux or Windows*
 

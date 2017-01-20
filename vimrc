@@ -2,7 +2,7 @@
 " Thanks: k-vim Project
 " Author:  mike
 " Version: 0.0.1-beta
-" Email: mike@mikecoder.cn 
+" Email: mike@mikecoder.cn
 " ReadMe: README.md
 " Sections:
 "       -> Initial Plugin 加载插件

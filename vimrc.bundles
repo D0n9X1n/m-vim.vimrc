@@ -201,8 +201,8 @@ let g:used_javascript_libs = 'jquery,underscore,backbone'
 " https://github.com/marijnh/tern_for_vim
 Plug 'marijnh/tern_for_vim'
 
-" json
-Plug 'elzr/vim-json', {'for': 'json'}
+" " json
+" Plug 'elzr/vim-json', {'for': 'json'}
 
 " ###### vim.less : less 自动更新##########
 Plug 'groenewege/vim-less'
@@ -648,9 +648,9 @@ call plug#end()
     let g:html_indent_style1 = "inc"
 " }}}
 
-" json {{{
-    let g:vim_json_syntax_conceal = 0
-" }}}
+" " json {{{
+    " let g:vim_json_syntax_conceal = 0
+" " }}}
 
 " css {{{
 " }}}
