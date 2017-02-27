@@ -661,7 +661,7 @@ call plug#end()
 
 " ag.vim {{{
     let g:ag_working_path_mode="r"
-    map <leader>s :Ag
+    map <leader>s :Ag 
 " }}}
 
 " 终端 {{{
