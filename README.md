@@ -7,7 +7,7 @@ Yet, just another vim config project.
 
 This is the vim config project which fits myself. Hope you will like it.
 
-###How to install
+### How to install
 
 #### Install the pre-dependency
 
@@ -44,15 +44,15 @@ brew install node
 npm install jshint -g
 npm install jslint -g
 ```
-####Then use sh install.sh it will auto-install.
+#### Then use sh install.sh it will auto-install.
 
 *Sorry, I have no other device to test centos or other release version of Linux or Windows*
 
-###Usage
+### Usage
 See @[Usage.md](./doc/Usage.md)
 
-###TODO
+### TODO
 See @[TODO.md](./TODO.md)
 
-###License
+### License
 See @[License](./LICENSE)
