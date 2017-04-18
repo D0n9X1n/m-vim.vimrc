@@ -170,8 +170,8 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 
 " markdown 增强
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'gabrielelana/vim-markdown'
+Plug 'joker1007/vim-markdown-quote-syntax'
 
 " 1. vim a.go
 " 2. :GoInstallBinaries
@@ -184,39 +184,20 @@ Plug 'hdima/python-syntax'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'Glench/Vim-Jinja2-Syntax'
 
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-" dir / dar
-Plug 'nelstrom/vim-textobj-rubyblock'
-
 " javascript
 " 注意: syntax这个插件要放前面
 Plug 'othree/yajs.vim' | Plug 'pangloss/vim-javascript'
-" Plug 'jelera/vim-javascript-syntax' | Plug 'pangloss/vim-javascript'
-
-Plug 'othree/javascript-libraries-syntax.vim'
-let g:used_javascript_libs = 'jquery,underscore,backbone'
 
 " for javascript 自动补全,配合YCM,需要安装nodejs&npm  see
 " https://github.com/marijnh/tern_for_vim
 Plug 'marijnh/tern_for_vim'
 
-" " json
-" Plug 'elzr/vim-json', {'for': 'json'}
-
-" ###### vim.less : less 自动更新##########
-Plug 'groenewege/vim-less'
-autocmd BufWritePost *.less :!lessc % > %:p:r.css
-
 " ###### emmet HTML complete #########
 Plug 'mattn/emmet-vim'
-
-Plug 'evanmiller/nginx-vim-syntax'
 
 " Add plugins to &runtimepath
 call plug#end()
 
-" ################### 基础 ######################
 " syntastic {{{
     let g:syntastic_error_symbol='>>'
     let g:syntastic_warning_symbol='>'
@@ -263,12 +244,10 @@ call plug#end()
     " 修改高亮的背景色, 适应主题
     highlight SyntasticErrorSign guifg=white guibg=black
 
-    " 禁止插件检查java
     " thanks to @marsqing, see https://github.com/wklken/k-vim/issues/164
-    let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java'] }
+    let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java', 'md', 'mkd'] }
 " }}}
 
-" ################### 自动补全 ###################
 
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
@@ -357,7 +336,6 @@ call plug#end()
     let g:closetag_html_style=1
 " }}}
 
-" ################### 快速编码 ###################
 
 " nerdcommenter {{{
     let g:NERDSpaceDelims=1
@@ -376,7 +354,6 @@ call plug#end()
     let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String'] }
 " }}}
 
-" ################### 快速移动 ###################
 
 " easymotion {{{
     let g:EasyMotion_smartcase = 1
@@ -399,7 +376,6 @@ call plug#end()
     " let g:qs_second_occurrence_highlight_color = 81         " terminal vim
 " }}}
 
-" ################### 快速选中 ###################
 
 " expandregion {{{
     " map + <Plug>(expand_region_expand)
@@ -425,8 +401,6 @@ call plug#end()
     let g:multi_cursor_quit_key='<Esc>'
 " }}}
 
-" ################### 功能相关 ###################
-
 " ctrlp ctrlpfunky{{{
     let g:ctrlp_map = '<leader>p'
     let g:ctrlp_cmd = 'CtrlP'
@@ -442,12 +416,12 @@ call plug#end()
     let g:ctrlp_mruf_max=500
     let g:ctrlp_follow_symlinks=1
     " 如果安装了ag, 使用ag
-    " if executable('ag')
-    " " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    " " ag is fast enough that CtrlP doesn't need to cache
-    " let g:ctrlp_use_caching = 0
-    " endif
+    if executable('ag')
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+    endif
 
     " ctrlpfunky
     " ctrlp插件1 - 不用ctag进行函数快速跳转
@@ -499,7 +473,6 @@ call plug#end()
     noremap <leader>h :GundoToggle<CR>
 " }}}
 
-" ################### 显示增强 ###################
 
 " airline {{{
     if !exists('g:airline_symbols')
@@ -515,7 +488,6 @@ call plug#end()
     " let g:airline#extensions#tabline#enabled = 1
 " }}}
 
-" ################### 显示增强-主题 ###################
 
 " solarized {{{
     let g:solarized_termtrans=1
@@ -530,8 +502,6 @@ call plug#end()
     let g:rehash256 = 1
 " }}}
 
-" ################### 快速导航 ###################
-
 " nerdtree nerdtreetabs {{{
     map <leader>n :NERDTreeToggle<CR>
     let NERDTreeHighlightCursorline=1
@@ -542,18 +512,16 @@ call plug#end()
     let g:NERDTreeMapOpenSplit = 's'
     let g:NERDTreeMapOpenVSplit = 'v'
 
-
     " nerdtreetabs
     map <Leader>n <plug>NERDTreeTabsToggle<CR>
     " 关闭同步
-    let g:nerdtree_tabs_synchronize_view=0
-    let g:nerdtree_tabs_synchronize_focus=0
+    let g:nerdtree_tabs_synchronize_view=1
+    let g:nerdtree_tabs_synchronize_focus=1
     " 是否自动开启nerdtree
     " thank to @ListenerRi, see https://github.com/wklken/k-vim/issues/165
-    let g:nerdtree_tabs_open_on_console_startup=0
-    let g:nerdtree_tabs_open_on_gui_startup=0
+    let g:nerdtree_tabs_open_on_console_startup=1
+    let g:nerdtree_tabs_open_on_gui_startup=1
 " }}}
-
 
 " Vim Workspace Controller
 " ctrlspace {{{
@@ -616,12 +584,10 @@ call plug#end()
     \ }
 " }}}
 
-" ################### 语言相关 ###################
 
 " pythonsyntax {{{
     let python_highlight_all = 1
 " }}}
-
 
 " vimgo {{{
     let g:go_highlight_functions = 1
@@ -638,8 +604,8 @@ call plug#end()
 " markdown {{{
     let g:vim_markdown_folding_disabled = 0
     let g:vim_markdown_conceal = 0
+    let g:markdown_enable_spell_checking = 0
 " }}}
-
 
 " javascript {{{
     " pangloss/vim-javascript
@@ -648,24 +614,9 @@ call plug#end()
     let g:html_indent_style1 = "inc"
 " }}}
 
-" " json {{{
-    " let g:vim_json_syntax_conceal = 0
-" " }}}
-
-" css {{{
-" }}}
-
-" nginx {{{
-" }}}
-
-
 " ag.vim {{{
     let g:ag_working_path_mode="r"
-    map <leader>s :Ag 
-" }}}
-
-" 终端 {{{
-    map <leader>t :ConqueTermSplit zsh<cr>
+    map <leader>s :Ag
 " }}}
 
 " indentLine.vim {{{
@@ -702,4 +653,37 @@ call plug#end()
     map <leader>m :MarkdownPreview github<CR>
 " }}}
 
+" markdown_quote_syntax {{{
+    " Add syntax rule
+    let g:markdown_quote_syntax_filetypes = {
+            \ "javascript" : {
+            \   "start" : "javascript",
+            \},
+            \ "css" : {
+            \   "start" : "\\%(css\\|scss\\)",
+            \},
+            \ "ruby" : {
+            \   "start" : "ruby",
+            \},
+            \ "cpp" : {
+            \   "start" : "cpp",
+            \},
+    \}
+
+    " 'start' and 'end' is vim regular expression.
+    " need to care backslash.
+
+    " Each codeblock is defined as:
+    "
+    "    'codeblock[0].filetype.codeblock[1]<code lines>codeblock[2]'
+    "
+    " Above example is for the liquid highlight tag. (It is already included by default.)
+    "    {% highlight vim %}
+    "    any codes
+    "    ...
+    "    {% endhighlight %}
+
+    " Add other file types in which quote syntax should be on.
+    let g:markdown_quote_syntax_on_filetypes = ['text']
+" }}}
 "------------------------------------------- end of configs --------------------------------------------
