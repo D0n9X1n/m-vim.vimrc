@@ -170,8 +170,8 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 
 " markdown 增强
-Plug 'gabrielelana/vim-markdown'
-Plug 'joker1007/vim-markdown-quote-syntax'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " 1. vim a.go
 " 2. :GoInstallBinaries
@@ -406,7 +406,7 @@ call plug#end()
     let g:ctrlp_cmd = 'CtrlP'
     map <leader>f :CtrlPMRU<CR>
     let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+        \ 'dir':  '\v[\/](\.(git|hg|svn|rvm|)|node_modules)$',
         \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
         \ }
     let g:ctrlp_working_path_mode=0
@@ -416,12 +416,12 @@ call plug#end()
     let g:ctrlp_mruf_max=500
     let g:ctrlp_follow_symlinks=1
     " 如果安装了ag, 使用ag
-    if executable('ag')
-    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 0
-    endif
+    " if executable('ag')
+    " " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " " ag is fast enough that CtrlP doesn't need to cache
+    " let g:ctrlp_use_caching = 0
+    " endif
 
     " ctrlpfunky
     " ctrlp插件1 - 不用ctag进行函数快速跳转
@@ -519,8 +519,8 @@ call plug#end()
     let g:nerdtree_tabs_synchronize_focus=1
     " 是否自动开启nerdtree
     " thank to @ListenerRi, see https://github.com/wklken/k-vim/issues/165
-    let g:nerdtree_tabs_open_on_console_startup=1
-    let g:nerdtree_tabs_open_on_gui_startup=1
+    let g:nerdtree_tabs_open_on_console_startup=0
+    let g:nerdtree_tabs_open_on_gui_startup=0
 " }}}
 
 " Vim Workspace Controller
@@ -605,6 +605,7 @@ call plug#end()
     let g:vim_markdown_folding_disabled = 0
     let g:vim_markdown_conceal = 0
     let g:markdown_enable_spell_checking = 0
+    let g:vim_markdown_new_list_item_indent = 4
 " }}}
 
 " javascript {{{
@@ -615,8 +616,8 @@ call plug#end()
 " }}}
 
 " ag.vim {{{
-    let g:ag_working_path_mode="r"
-    map <leader>s :Ag
+    " let g:ag_working_path_mode="r"
+    map <leader>s :Ag 
 " }}}
 
 " indentLine.vim {{{
@@ -651,39 +652,5 @@ call plug#end()
 
 " markdown-preview.vim {{{
     map <leader>m :MarkdownPreview github<CR>
-" }}}
-
-" markdown_quote_syntax {{{
-    " Add syntax rule
-    let g:markdown_quote_syntax_filetypes = {
-            \ "javascript" : {
-            \   "start" : "javascript",
-            \},
-            \ "css" : {
-            \   "start" : "\\%(css\\|scss\\)",
-            \},
-            \ "ruby" : {
-            \   "start" : "ruby",
-            \},
-            \ "cpp" : {
-            \   "start" : "cpp",
-            \},
-    \}
-
-    " 'start' and 'end' is vim regular expression.
-    " need to care backslash.
-
-    " Each codeblock is defined as:
-    "
-    "    'codeblock[0].filetype.codeblock[1]<code lines>codeblock[2]'
-    "
-    " Above example is for the liquid highlight tag. (It is already included by default.)
-    "    {% highlight vim %}
-    "    any codes
-    "    ...
-    "    {% endhighlight %}
-
-    " Add other file types in which quote syntax should be on.
-    let g:markdown_quote_syntax_on_filetypes = ['text']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
