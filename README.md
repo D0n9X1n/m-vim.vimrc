@@ -1,7 +1,7 @@
 m-vim.vimrc
 ---
 
-[![GitHub version](https://badge.fury.io/gh/MikeCoder%2Fm-vim.vimrc.svg)](https://badge.fury.io/gh/MikeCoder%2Fm-vim.vimrc)
+[![GitHub version](https://badge.fury.io/gh/MikeCoder%2Fm-vim.vimrc.svg)](https://badge.fury.io/gh/MikeCoder/m-vim.vimrc)
 
 Yet, just another vim config project.
 
