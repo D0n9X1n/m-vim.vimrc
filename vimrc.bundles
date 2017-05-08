@@ -22,7 +22,7 @@ filetype off " required! turn off
 call plug#begin('~/.vim/bundle')
 
 " 自动补全，用来在没有 YCM 的情况下
-Plug 'vim-scripts/AutoComplPop'
+" Plug 'vim-scripts/AutoComplPop'
 
 " Wakatime 统计, 需要的自己打开
 Plug 'wakatime/vim-wakatime'
@@ -285,10 +285,7 @@ call plug#end()
     let g:ycm_filetype_blacklist = {
         \ 'tagbar' : 1,
         \ 'gitcommit' : 1,
-        \ 'php': 1,
         \ 'js': 1,
-        \ 'md': 1,
-        \ 'mkd': 1,
         \}
 " }}}
 
