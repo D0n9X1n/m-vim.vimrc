@@ -4,6 +4,10 @@ int cmp(const void* a, const void* b) {
 }
 endsnippet
 
+snippet read
+freopen("./in.txt","r",stdin);
+endsnippet
+
 snippet r
 return ${1};
 endsnippet
@@ -80,11 +84,15 @@ for (int i = 0; i < ${1}; i++) {
 endsnippet
 
 snippet in
-cin>>${1}>>${2};
+cin >> ${1} >> ${2};
 endsnippet
 
 snippet out
-cout<<${1}<<endl;
+cout << ${1} << endl;
+endsnippet
+
+snippet cout
+cout << ${1} << endl;
 endsnippet
 
 snippet if
