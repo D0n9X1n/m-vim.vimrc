@@ -295,13 +295,13 @@ nnoremap <F3> :set list! list?<CR>
 nnoremap <F4> :set wrap! wrap?<CR>
 
 " F6 语法开关，关闭语法可以加快大文件的展示
-nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+" nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
-" F7 开关相对行号
-nnoremap <F7> :call NumberToggle()<cr>
+" F6 开关相对行号
+nnoremap <F6> :call NumberToggle()<cr>
 
-" F8 查看修改部分 (GIT)
-nnoremap <F8> : GitGutterToggle<CR>
+" F12 查看修改部分 (GIT)
+nnoremap <F12> : GitGutterToggle<CR>
 
 set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
                                 "    paste mode, where you can paste mass data
