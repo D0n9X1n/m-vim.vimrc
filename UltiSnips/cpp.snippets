@@ -88,21 +88,20 @@ snippet cla "An entire .h generator" b
 #ifndef ${2:`!v substitute(vim_snippets#Filename('$1_H','ClassName'),'.*','\U&\E','')`}
 #define $2
 
-class ${1:`!v substitute(substitute(vim_snippets#Filename('$1','ClassName'),'^.','\u&',''), '_\(\w\)', '\u\1', 'g')`}
-{
-private:
-	$3
+class ${1:`!v substitute(substitute(vim_snippets#Filename('$1','ClassName'),'^.','\u&',''), '_\(\w\)', '\u\1', 'g')`} {
+    private:
+        $3
 
-public:
-	$1();
-	virtual ~$1();
+    public:
+        $1();
+        virtual ~$1();
 };
 
 #endif /* $2 */
 endsnippet
 
 
-snippet fnc "Basic c++ doxygen function template" b
+snippet func "Basic c++ doxygen function template" b
 /**
 * @brief: ${4:brief}
 *
@@ -110,8 +109,7 @@ snippet fnc "Basic c++ doxygen function template" b
 *
 * @return: `!p snip.rv = t[1]`
 */
-${1:ReturnType} ${2:FunctionName}(${3:param})
-{
+${1:ReturnType} ${2:FunctionName}(${3:param}) {
   ${0:FunctionBody}
 }
 endsnippet
@@ -146,4 +144,28 @@ int kmp(string haystack, string needle) {
     return -1;
 }
 endsnippet
+
+snippet lcs "LCS function"
+int LCS(vector<int> nums) {
+    vector<int> rev = nums;
+    reverse(rev.begin(), rev.end());
+    int size = nums.size();
+    vector<vector<int> > DP(size + 1, vector<int>(size + 1));
+    for (int i = 1; i <= size; ++i) {
+        for (int j = 1; j <= size; ++j) {
+            if (nums[i - 1] == rev[j - 1]) {
+                DP[i][j] = DP[i - 1][j - 1] + 1;
+            } else if (DP[i-1][j] >= DP[i][j-1]) {
+                DP[i][j] = DP[i - 1][j];
+            } else if (DP[i - 1][j] < DP[i][j - 1]) {
+                DP[i][j] = DP[i][j - 1];
+            }
+        }
+    }
+
+    return DP[size][size];
+}
+endsnippet
 # vim:ft=snippets:
+
+
