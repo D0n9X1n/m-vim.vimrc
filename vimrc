@@ -294,20 +294,14 @@ nnoremap <F3> :set list! list?<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
-" F6 语法开关，关闭语法可以加快大文件的展示
-" nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+" F5 开关相对行号
+nnoremap <F5> :call NumberToggle()<cr>
 
-" F6 开关相对行号
-nnoremap <F6> :call NumberToggle()<cr>
+" F6 语法开关，关闭语法可以加快大文件的展示
+nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
 " F12 查看修改部分 (GIT)
 nnoremap <F12> : GitGutterToggle<CR>
-
-set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
-                                "    paste mode, where you can paste mass data
-                                "    that won't be autoindented
-" disbale paste mode when leaving insert mode
-au InsertLeave * set nopaste
 
 " F5 set paste问题已解决, 粘贴代码前不需要按F5了
 " F5 粘贴模式paste_mode开关,用于有格式的代码粘贴
