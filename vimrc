@@ -1,7 +1,7 @@
 "==========================================
 " Thanks: k-vim Project
 " Author:  mike
-" Version: 0.0.3
+" Version: 1.0.0
 " Email: mike@mikecoder.cn
 " ReadMe: README.md
 " Sections:
