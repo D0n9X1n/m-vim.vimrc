@@ -28,7 +28,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'wakatime/vim-wakatime'
 
 " 彩虹括号
-Plug 'MVIM/rainbow'
+Plug 'luochen1990/rainbow'
 
 "minibufferexpl 去掉
 Plug 'fholgado/minibufexpl.vim'
@@ -102,10 +102,6 @@ Plug 'vim-scripts/matchit.zip'
 " m/        list all marks
 Plug 'kshenoy/vim-signature'
 
-" quick selection and edit
-" expandregion
-" 选中区块
-Plug 'terryma/vim-expand-region'
 " 多光标选中编辑
 " multiplecursors
 Plug 'terryma/vim-multiple-cursors'
@@ -147,9 +143,6 @@ Plug 'bling/vim-airline'
 " 主题 solarized
 " solarized
 Plug 'altercation/vim-colors-solarized'
-" molokai
-" 主题 molokai
-Plug 'tomasr/molokai'
 
 " nav
 " nerdtree nerdtreetabs
@@ -158,20 +151,6 @@ Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs'
 Plug 'szw/vim-ctrlspace'
 " tagbar
 Plug 'majutsushi/tagbar'
-
-" text object
-" 支持自定义文本对象
-Plug 'kana/vim-textobj-user'
-" 增加行文本对象: l   dal yal cil
-Plug 'kana/vim-textobj-line'
-" 增加文件文本对象: e   dae yae cie
-Plug 'kana/vim-textobj-entire'
-" 增加缩进文本对象: i   dai yai cii - 相同缩进属于同一块
-Plug 'kana/vim-textobj-indent'
-
-" markdown 增强
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 
 " 1. vim a.go
 " 2. :GoInstallBinaries
@@ -182,15 +161,6 @@ Plug 'fatih/vim-go', {'for': 'go'}
 " pythonsyntax
 Plug 'hdima/python-syntax'
 Plug 'hynek/vim-python-pep8-indent'
-Plug 'Glench/Vim-Jinja2-Syntax'
-
-" javascript
-" 注意: syntax这个插件要放前面
-Plug 'othree/yajs.vim' | Plug 'pangloss/vim-javascript'
-
-" for javascript 自动补全,配合YCM,需要安装nodejs&npm  see
-" https://github.com/marijnh/tern_for_vim
-Plug 'marijnh/tern_for_vim'
 
 " ###### emmet HTML complete #########
 Plug 'mattn/emmet-vim'
@@ -262,7 +232,7 @@ call plug#end()
     let g:ycm_collect_identifiers_from_tags_files = 1
     " 开启语法关键字补全
 
-    " let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+    let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
 
     " 跳转到定义处, 分屏打开
     let g:ycm_goto_buffer_command = 'horizontal-split'
@@ -375,21 +345,6 @@ call plug#end()
     " let g:qs_second_occurrence_highlight_color = 81         " terminal vim
 " }}}
 
-
-" expandregion {{{
-    " map + <Plug>(expand_region_expand)
-    " map _ <Plug>(expand_region_shrink)
-    vmap v <Plug>(expand_region_expand)
-    vmap V <Plug>(expand_region_shrink)
-    " Extend the global default
-    call expand_region#custom_text_objects({
-      \ 'a]' :1,
-      \ 'ab' :1,
-      \ 'aB' :1,
-      \ 'ii' :0,
-      \ 'ai' :0,
-      \ })
-" }}}
 
 " multiplecursors {{{
     let g:multi_cursor_use_default_mapping=0
