@@ -2,11 +2,7 @@ priority -50
 
 extends c
 
-# We want to overwrite everything in parent ft.
 priority -48
-###########################################################################
-#			    Global functions 						  #
-###########################################################################
 
 global !p
 
@@ -24,34 +20,7 @@ def write_docstring_args(arglist, snip):
 	else:
 		snip.rv = args[0]
 
-
 endglobal
-
-###########################################################################
-#                            TextMate Snippets                            #
-###########################################################################
-snippet beginend "$1.begin(), $1.end() (beginend)"
-${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
-endsnippet
-
-snippet cl "class .. (class)"
-class ${1:`!p snip.rv = snip.basename or "name"`}
-{
-public:
-	${1/(\w+).*/$1/} (${2:arguments});
-	virtual ~${1/(\w+).*/$1/} ();
-
-private:
-	${0:/* data */}
-};
-endsnippet
-
-snippet ns "namespace .. (namespace)"
-namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
-{
-	${VISUAL}$0
-}${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
-endsnippet
 
 snippet readfile "read file (readF)"
 vector<char> v;
@@ -166,6 +135,39 @@ int LCS(vector<int> nums) {
     return DP[size][size];
 }
 endsnippet
+
+snippet fib "fib function"
+void multiply(long long c[2][2],long long a[2][2],long long b[2][2]) {
+    long long tmp[4];
+    tmp[0] = (a[0][0]*b[0][0])%MOD + (a[0][1]*b[1][0])%MOD;
+    tmp[1] = (a[0][0]*b[0][1])%MOD + (a[0][1]*b[1][1])%MOD;
+    tmp[2] = (a[1][0]*b[0][0])%MOD + (a[1][1]*b[1][0])%MOD;
+    tmp[3] = (a[1][0]*b[0][1])%MOD + (a[1][1]*b[1][1])%MOD;
+    c[0][0] = tmp[0]%MOD;
+    c[0][1] = tmp[1]%MOD;
+    c[1][0] = tmp[2]%MOD;
+    c[1][1] = tmp[3]%MOD;
+}
+
+long long fib(int n) {
+    if(n == 0) return 0;
+    else if(n <= 2) return 1;
+
+    long long a[2][2] = {{1,1}, {1,0}};
+    long long result[2][2] = {{1,0}, {0,1}};
+    long long s;
+    n -= 2;
+    while (n > 0) {
+        if(n%2 == 1) {
+            multiply(result, result, a);
+        }
+        multiply(a, a, a);
+        n /= 2;
+    }
+    s = (result[0][0] + result[0][1])%MOD;
+
+    return s;
+}
+endsnippet
+
 # vim:ft=snippets:
-
-
