@@ -294,11 +294,14 @@ nnoremap <F3> :set list! list?<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
-" F5 开关相对行号
-nnoremap <F5> :call NumberToggle()<cr>
+" F5 快速运行 
+nnoremap <F5> :QuickRun<cr>
 
-" F6 语法开关，关闭语法可以加快大文件的展示
-nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+" F6 开关相对行号
+nnoremap <F6> :call NumberToggle()<cr>
+
+" F7 语法开关，关闭语法可以加快大文件的展示
+nnoremap <F7> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
 " F12 查看修改部分 (GIT)
 nnoremap <F12> : GitGutterToggle<CR>
@@ -464,8 +467,8 @@ nnoremap ` '
 nnoremap U <C-r>
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+" nmap <silent> <leader>ev :e $MYVIMRC<CR>
+" nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 "==========================================
 " FileType Settings  文件类型设置

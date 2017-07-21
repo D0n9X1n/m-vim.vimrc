@@ -21,6 +21,9 @@ filetype off " required! turn off
 
 call plug#begin('~/.vim/bundle')
 
+" QuickRun
+Plug 'MikeCoder/quickrun.vim'
+
 " Wakatime 统计, 需要的自己打开
 Plug 'wakatime/vim-wakatime'
 
