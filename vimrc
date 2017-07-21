@@ -40,7 +40,7 @@ filetype plugin indent on
 "==========================================
 
 " history存储容量
-set history=10
+set history=1000
 
 " 检测文件类型
 filetype on

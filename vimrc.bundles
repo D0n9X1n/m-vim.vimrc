@@ -21,9 +21,6 @@ filetype off " required! turn off
 
 call plug#begin('~/.vim/bundle')
 
-" 自动补全，用来在没有 YCM 的情况下
-" Plug 'vim-scripts/AutoComplPop'
-
 " Wakatime 统计, 需要的自己打开
 Plug 'wakatime/vim-wakatime'
 
@@ -126,8 +123,6 @@ Plug 'dyng/ctrlsf.vim'
 " map g/ <Plug>(incsearch-stay)
 
 " git
-" fugitive
-Plug 'tpope/vim-fugitive'
 " gitgutter
 Plug 'airblade/vim-gitgutter'
 
@@ -138,7 +133,8 @@ Plug 'sjl/gundo.vim'
 " view
 " airline
 " 状态栏增强展示
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " 主题 solarized
 " solarized
@@ -409,11 +405,6 @@ call plug#end()
         \ }
 " }}}
 
-" fugitive {{{
-    " :Gdiff  :Gstatus :Gvsplit
-    nnoremap <leader>ge :Gdiff<CR>
-" }}}
-
 " gitgutter {{{
     " 同git diff,实时展示文件中修改的行
     " 只是不喜欢除了行号多一列, 默认关闭,gs时打开
@@ -427,6 +418,10 @@ call plug#end()
     noremap <leader>h :GundoToggle<CR>
 " }}}
 
+
+" airline-theme {{{
+    let g:airline_theme = 'solarized'
+" }}}
 
 " airline {{{
     if !exists('g:airline_symbols')
@@ -450,12 +445,6 @@ call plug#end()
     " let g:solarized_termcolors=256
 " }}}
 
-" molokai {{{
-    " monokai原始背景色
-    let g:molokai_original = 1
-    let g:rehash256 = 1
-" }}}
-
 " nerdtree nerdtreetabs {{{
     map <leader>n :NERDTreeToggle<CR>
     let NERDTreeHighlightCursorline=1
@@ -467,7 +456,6 @@ call plug#end()
     let g:NERDTreeMapOpenVSplit = 'v'
 
     " nerdtreetabs
-    map <Leader>n <plug>NERDTreeTabsToggle<CR>
     " 关闭同步
     let g:nerdtree_tabs_synchronize_view=1
     let g:nerdtree_tabs_synchronize_focus=1
