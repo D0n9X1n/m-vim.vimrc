@@ -126,6 +126,7 @@ Plug 'dyng/ctrlsf.vim'
 " map g/ <Plug>(incsearch-stay)
 
 " git
+Plug 'tpope/vim-fugitive'
 " gitgutter
 Plug 'airblade/vim-gitgutter'
 
