@@ -598,4 +598,15 @@ call plug#end()
 " markdown-preview.vim {{{
     map <leader>m :MarkdownPreview github<CR>
 " }}}
+
+" quickrun.vim {{{
+let g:quickrun_known_file_types = {
+        \"cpp": ["!g++ %", "./a.out"],
+        \"c": ["!gcc %", "./a.out"],
+        \"php": ["!php %"],
+        \"vim": ["source %"],
+        \"py": ["!python %"],
+        \"go": ["!go test"],
+    \}
+" }}}
 "------------------------------------------- end of configs --------------------------------------------
