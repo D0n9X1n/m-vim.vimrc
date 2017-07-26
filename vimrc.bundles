@@ -50,7 +50,7 @@ Plug 'MikeCoder/markdown-preview.vim'
 Plug 'MikeCoder/code-fold.vim'
 
 " 显示线
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " syntastic
 Plug 'scrooloose/syntastic'
@@ -600,13 +600,13 @@ call plug#end()
 " }}}
 
 " quickrun.vim {{{
-let g:quickrun_known_file_types = {
-        \"cpp": ["!g++ %", "./a.out"],
-        \"c": ["!gcc %", "./a.out"],
-        \"php": ["!php %"],
-        \"vim": ["source %"],
-        \"py": ["!python %"],
-        \"go": ["!go test"],
-    \}
+    let g:quickrun_known_file_types = {
+            \"cpp": ["!g++ %", "./a.out"],
+            \"c": ["!gcc %", "./a.out"],
+            \"php": ["!php %"],
+            \"vim": ["source %"],
+            \"py": ["!python %"],
+            \"go": ["!go test"],
+        \}
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
