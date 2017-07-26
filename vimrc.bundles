@@ -132,7 +132,7 @@ Plug 'airblade/vim-gitgutter'
 
 " gundo
 " edit history, 可以查看回到某个历史状态
-Plug 'sjl/gundo.vim'
+" Plug 'sjl/gundo.vim'
 
 " view
 " airline
@@ -162,7 +162,6 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'hdima/python-syntax'
 Plug 'hynek/vim-python-pep8-indent'
 
-" ###### emmet HTML complete #########
 Plug 'mattn/emmet-vim'
 
 " Add plugins to &runtimepath
@@ -207,9 +206,9 @@ call plug#end()
             Errors
         endif
     endfunction
-    nnoremap <Leader>s :call ToggleErrors()<cr>
-    " nnoremap <Leader>sn :lnext<cr>
-    " nnoremap <Leader>sp :lprevious<cr>
+    " nnoremap <Leader>s :call ToggleErrors()<cr>
+    nnoremap <Leader>sn :lnext<cr>
+    nnoremap <Leader>sp :lprevious<cr>
 
     " 修改高亮的背景色, 适应主题
     highlight SyntasticErrorSign guifg=white guibg=black
@@ -232,7 +231,7 @@ call plug#end()
     let g:ycm_collect_identifiers_from_tags_files = 1
     " 开启语法关键字补全
 
-    let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+    let g:ycm_seed_identifiers_with_syntax = 1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
 
     " 跳转到定义处, 分屏打开
     let g:ycm_goto_buffer_command = 'horizontal-split'
@@ -358,7 +357,7 @@ call plug#end()
 " ctrlp ctrlpfunky{{{
     let g:ctrlp_map = '<leader>p'
     let g:ctrlp_cmd = 'CtrlP'
-    map <leader>f :CtrlPMRU<CR>
+    " map <leader>f :CtrlPMRU<CR>
     let g:ctrlp_custom_ignore = {
         \ 'dir':  '\v[\/](\.(git|hg|svn|rvm|)|node_modules)$',
         \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
@@ -370,18 +369,16 @@ call plug#end()
     let g:ctrlp_mruf_max=500
     let g:ctrlp_follow_symlinks=1
     " 如果安装了ag, 使用ag
-    " if executable('ag')
-    " " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    " " ag is fast enough that CtrlP doesn't need to cache
-    " let g:ctrlp_use_caching = 0
-    " endif
+    if executable('ag')
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+    endif
 
     " ctrlpfunky
     " ctrlp插件1 - 不用ctag进行函数快速跳转
-    nnoremap <Leader>fu :CtrlPFunky<Cr>
-    " narrow the list down with a word under cursor
-    nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+    nnoremap <Leader>f :CtrlPFunky<Cr>
     let g:ctrlp_funky_syntax_highlight = 1
 
     let g:ctrlp_extensions = ['funky']
