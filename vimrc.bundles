@@ -30,7 +30,7 @@ Plug 'wakatime/vim-wakatime'
 " 彩虹括号
 Plug 'luochen1990/rainbow'
 
-"minibufferexpl 去掉
+"minibufferexpl
 Plug 'fholgado/minibufexpl.vim'
 
 " Go 加强
@@ -38,7 +38,7 @@ Plug 'dgryski/vim-godef'
 Plug 'Blackrush/vim-gocode'
 
 " RUST 支持
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 
 " 全文搜索
 Plug 'rking/ag.vim'
@@ -93,7 +93,7 @@ Plug 'Lokaltog/vim-easymotion'
 " quickscope
 Plug 'unblevable/quick-scope'
 
-Plug 'vim-scripts/matchit.zip'
+" Plug 'vim-scripts/matchit.zip'
 " signature
 " 显示marks - 方便自己进行标记和跳转
 " m[a-zA-Z] add mark
@@ -157,13 +157,6 @@ Plug 'majutsushi/tagbar'
 " vimgo
 Plug 'fatih/vim-go', {'for': 'go'}
 
-" for python.vim syntax highlight
-" pythonsyntax
-Plug 'hdima/python-syntax'
-Plug 'hynek/vim-python-pep8-indent'
-
-Plug 'mattn/emmet-vim'
-
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -220,18 +213,21 @@ call plug#end()
 
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
-    "let g:ycm_key_list_select_completion=['<c-n>']
+    " let g:ycm_key_list_select_completion=['<c-n>']
     let g:ycm_key_list_select_completion = ['<Down>']
-    "let g:ycm_key_list_previous_completion=['<c-p>']
+    " let g:ycm_key_list_previous_completion=['<c-p>']
     let g:ycm_key_list_previous_completion = ['<Up>']
-    " let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
-    " let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
-    let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
+    let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
+    let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
+    " let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
     " let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
     let g:ycm_collect_identifiers_from_tags_files = 1
     " 开启语法关键字补全
+    " let g:ycm_seed_identifiers_with_syntax = 1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+    let g:ycm_autoclose_preview_window_after_insertion = 1
 
-    let g:ycm_seed_identifiers_with_syntax = 1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+    let g:ycm_log_level = 'critical'
+    let g:ycm_keep_logfiles = 0
 
     " 跳转到定义处, 分屏打开
     let g:ycm_goto_buffer_command = 'horizontal-split'
@@ -249,7 +245,7 @@ call plug#end()
     endif
 
     " 直接触发自动补全 insert模式下
-    " let g:ycm_key_invoke_completion = '<C-Space>'
+    let g:ycm_auto_trigger = 0
     " 黑名单,不启用
     let g:ycm_filetype_blacklist = {
         \ 'tagbar' : 1,
@@ -257,6 +253,21 @@ call plug#end()
         \ 'js': 1,
         \ 'vimrc': 1,
         \ 'md': 1,
+        \}
+
+    let g:ycm_disable_for_files_larger_than_kb = 2000
+
+    let g:ycm_semantic_triggers = {
+        \   'c' : ['->', '.'],
+        \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'],
+        \   'ocaml' : ['.', '#'],
+        \   'cpp,objcpp' : ['->', '.', '::'],
+        \   'perl' : ['->'],
+        \   'php' : ['->', '::'],
+        \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+        \   'ruby' : ['.', '::'],
+        \   'lua' : ['.', ':'],
+        \   'erlang' : [':'],
         \}
 " }}}
 
@@ -415,13 +426,8 @@ call plug#end()
     nnoremap <leader>gs :GitGutterToggle<CR>
 " }}}
 
-" gundo {{{
-    noremap <leader>h :GundoToggle<CR>
-" }}}
-
-
 " airline-theme {{{
-    let g:airline_theme = 'solarized'
+    let g:airline_theme = 'molokai'
 " }}}
 
 " airline {{{
@@ -563,14 +569,19 @@ call plug#end()
 " }}}
 
 " indentLine.vim {{{
-    let g:indentLine_color_term = 239
+    let g:indentLine_color_term = 202
+    let g:indentLine_char = '¦'
+    let g:indentLine_setColors = 3
+
+    let g:indentLine_bgcolor_term = 200
+    let g:indentLine_bgcolor_gui = '#FF5F00'
 
     "GVim
-    let g:indentLine_color_gui = '#A4E57E'
+    let g:indentLine_color_gui = '#8a7f80'
 
     " none X terminal
-    let g:indentLine_color_tty_light = 7 " (default: 4)
-    let g:indentLine_color_dark = 1 " (default: 2)
+    let g:indentLine_color_tty_light = 4 " (default: 4)
+    let g:indentLine_color_dark = 2 " (default: 2)
 " }}}
 
 " minibufexpl {{{
