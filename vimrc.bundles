@@ -221,9 +221,10 @@ call plug#end()
     let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
     " let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
     " let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
-    let g:ycm_collect_identifiers_from_tags_files = 1
+    " let g:ycm_collect_identifiers_from_tags_files = 1
     " 开启语法关键字补全
     " let g:ycm_seed_identifiers_with_syntax = 1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+
     let g:ycm_autoclose_preview_window_after_insertion = 1
 
     let g:ycm_log_level = 'critical'
@@ -245,7 +246,8 @@ call plug#end()
     endif
 
     " 直接触发自动补全 insert模式下
-    let g:ycm_auto_trigger = 0
+    let g:ycm_auto_trigger = 1
+
     " 黑名单,不启用
     let g:ycm_filetype_blacklist = {
         \ 'tagbar' : 1,
@@ -255,20 +257,7 @@ call plug#end()
         \ 'md': 1,
         \}
 
-    let g:ycm_disable_for_files_larger_than_kb = 2000
-
-    let g:ycm_semantic_triggers = {
-        \   'c' : ['->', '.'],
-        \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'],
-        \   'ocaml' : ['.', '#'],
-        \   'cpp,objcpp' : ['->', '.', '::'],
-        \   'perl' : ['->'],
-        \   'php' : ['->', '::'],
-        \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-        \   'ruby' : ['.', '::'],
-        \   'lua' : ['.', ':'],
-        \   'erlang' : [':'],
-        \}
+    let g:ycm_disable_for_files_larger_than_kb = 20
 " }}}
 
 " ultisnips {{{
@@ -552,16 +541,9 @@ call plug#end()
 
 " markdown {{{
     let g:vim_markdown_folding_disabled = 0
-    let g:vim_markdown_conceal = 0
-    let g:markdown_enable_spell_checking = 0
+    let g:vim_markdown_conceal = 1
+    let g:markdown_enable_spell_checking = 1
     let g:vim_markdown_new_list_item_indent = 4
-" }}}
-
-" javascript {{{
-    " pangloss/vim-javascript
-    let g:html_indent_inctags = "html,body,head,tbody"
-    let g:html_indent_script1 = "inc"
-    let g:html_indent_style1 = "inc"
 " }}}
 
 " ag.vim {{{
