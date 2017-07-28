@@ -304,15 +304,17 @@ nnoremap <F12> : GitGutterToggle<CR>
 " leave insert nopaste mode
 au InsertLeave * set nopaste
 " automatically set paste mode in vim when pasting in insert mode
-au InsertEnter * call XTermPasteBegin()
 " F5 set paste问题已解决, 粘贴代码前不需要按F5了
 " F5 粘贴模式paste_mode开关,用于有格式的代码粘贴
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
   set paste
   return ""
 endfunction
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " 分屏窗口移动, Smart way to move between windows
 map <C-j> <C-W>j
