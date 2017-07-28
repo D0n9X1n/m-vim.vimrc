@@ -418,7 +418,7 @@ call plug#end()
 " }}}
 
 " airline-theme {{{
-    let g:airline_theme = 'molokai'
+    let g:airline_theme = 'murmur'
 " }}}
 
 " airline {{{
