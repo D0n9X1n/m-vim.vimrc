@@ -69,7 +69,7 @@ set noswapfile
 set wildignore=*.swp,*.bak,*.pyc,*.class,.svn,tags
 
 " 突出显示当前列
-set cursorcolumn
+" set cursorcolumn
 " 突出显示当前行
 set cursorline
 
@@ -289,7 +289,7 @@ nnoremap <F3> :set list! list?<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
-" F5 快速运行 
+" F5 快速运行
 nnoremap <F5> :QuickRun<cr>
 
 " F6 开关相对行号
@@ -301,9 +301,12 @@ nnoremap <F7> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 " F12 查看修改部分 (GIT)
 nnoremap <F12> : GitGutterToggle<CR>
 
+" leave insert nopaste mode
+au InsertLeave * set nopaste
+" automatically set paste mode in vim when pasting in insert mode
+au InsertEnter * call XTermPasteBegin()
 " F5 set paste问题已解决, 粘贴代码前不需要按F5了
 " F5 粘贴模式paste_mode开关,用于有格式的代码粘贴
-" Automatically set paste mode in Vim when pasting in insert mode
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
   set paste

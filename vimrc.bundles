@@ -21,6 +21,8 @@ filetype off " required! turn off
 
 call plug#begin('~/.vim/bundle')
 
+" PHP
+
 " QuickRun
 Plug 'MikeCoder/quickrun.vim'
 
@@ -37,9 +39,6 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'dgryski/vim-godef'
 Plug 'Blackrush/vim-gocode'
 
-" RUST 支持
-" Plug 'rust-lang/rust.vim'
-
 " 全文搜索
 Plug 'rking/ag.vim'
 
@@ -50,7 +49,7 @@ Plug 'MikeCoder/markdown-preview.vim'
 Plug 'MikeCoder/code-fold.vim'
 
 " 显示线
-" Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
 " syntastic
 Plug 'scrooloose/syntastic'
@@ -226,7 +225,10 @@ call plug#end()
     " let g:ycm_seed_identifiers_with_syntax = 1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
 
     let g:ycm_autoclose_preview_window_after_insertion = 1
+    let g:ycm_min_num_identifier_candidate_chars = 2
+    let g:ycm_min_num_of_chars_for_completion = 2
 
+    " debug, info, warning, error, critical
     let g:ycm_log_level = 'critical'
     let g:ycm_keep_logfiles = 0
 
