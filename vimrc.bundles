@@ -162,9 +162,9 @@ call plug#end()
 " syntastic {{{
     let g:syntastic_error_symbol='>>'
     let g:syntastic_warning_symbol='>'
-    let g:syntastic_check_on_open=1
+    let g:syntastic_check_on_open=0
     let g:syntastic_check_on_wq=0
-    let g:syntastic_enable_highlighting=1
+    let g:syntastic_enable_highlighting=0
 
     " checkers
     " 最轻量
@@ -418,7 +418,7 @@ call plug#end()
 " }}}
 
 " airline-theme {{{
-    let g:airline_theme = 'murmur'
+    let g:airline_theme = 'base16'
 " }}}
 
 " airline {{{
