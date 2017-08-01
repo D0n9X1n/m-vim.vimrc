@@ -553,20 +553,20 @@ call plug#end()
 " }}}
 
 " indentLine.vim {{{
-    let g:indentLine_enabled = 0
-    let g:indentLine_color_term = 202
+    let g:indentLine_enabled = 1
+    let g:indentLine_color_term = 159
     let g:indentLine_char = '¦'
-    let g:indentLine_setColors = 3
+    let g:indentLine_setColors = 2
 
-    let g:indentLine_bgcolor_term = 200
-    let g:indentLine_bgcolor_gui = '#FF5F00'
+    let g:indentLine_bgcolor_term = 1
+    let g:indentLine_bgcolor_gui = '#222222'
 
     "GVim
     let g:indentLine_color_gui = '#8a7f80'
 
     " none X terminal
-    let g:indentLine_color_tty_light = 4 " (default: 4)
-    let g:indentLine_color_dark = 2 " (default: 2)
+    let g:indentLine_color_tty_light = 2 " (default: 4)
+    let g:indentLine_color_dark = 1 " (default: 2)
 " }}}
 
 " minibufexpl {{{
@@ -594,7 +594,7 @@ call plug#end()
 
 " quickrun.vim {{{
     let g:quickrun_known_file_types = {
-                \"cpp": ["!g++ -g %", "lldb ./a.out"],
+                \"cpp": ["!g++ -g %", "./a.out"],
                 \"c": ["!g++ -g %", "./a.out"],
                 \"php": ["!php %"],
                 \"vim": ["source %"],
