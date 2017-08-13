@@ -419,7 +419,7 @@ call plug#end()
 " }}}
 
 " airline-theme {{{
-    let g:airline_theme = 'qwq'
+    let g:airline_theme = 'base16'
 " }}}
 
 " airline {{{
