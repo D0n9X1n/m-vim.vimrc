@@ -70,6 +70,7 @@ using namespace std;
 ${1}
 
 int main() {
+	ios::sync_with_stdio(false);
 	return 0;
 }
 endsnippet
@@ -126,32 +127,32 @@ endsnippet
 
 snippet gcd "function gcd"
 void swap(int & a, int & b) {
-    int c = a;
-    a = b;
-    b = c;
+	int c = a;
+	a = b;
+	b = c;
 }
 int gcd(int a,int b) {
-    if(0 == a) {
-        return b;
-    }
-    if(0 == b) {
-        return a;
-    }
-    if(a > b) {
-        swap(a,b);
-    }
-    for(int c = a % b; c > 0; c = a % b) {
-        a = b;
-        b = c;
-    }
-    return b;
+	if(0 == a) {
+		return b;
+	}
+	if(0 == b) {
+		return a;
+	}
+	if(a > b) {
+		swap(a,b);
+	}
+	for(int c = a % b; c > 0; c = a % b) {
+		a = b;
+		b = c;
+	}
+	return b;
 }
 endsnippet
 
 snippet bc "function bit count"
 int bc(unsigned int n) {
-    unsigned int tmp = n - ((n >>1) &033333333333) - ((n >>2) &011111111111);
-    return ((tmp + (tmp >>3)) &030707070707) %63;
+	unsigned int tmp = n - ((n >>1) &033333333333) - ((n >>2) &011111111111);
+	return ((tmp + (tmp >>3)) &030707070707) %63;
 }
 endsnippet
 
