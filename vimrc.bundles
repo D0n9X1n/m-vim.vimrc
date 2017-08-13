@@ -554,7 +554,7 @@ call plug#end()
 " }}}
 
 " indentLine.vim {{{
-    let g:indentLine_enabled = 1
+    let g:indentLine_enabled = 0
     let g:indentLine_color_term = 159
     let g:indentLine_char = '¦'
     let g:indentLine_setColors = 2

@@ -241,4 +241,19 @@ vector<int> getDivisor(int x) {
     return divisor;
 }
 endsnippet
+
+
+snippet powMod "powMod"
+int powMod(int base,int k,int MOD){
+	long long x = 1,y = base;
+	while(k > 0){
+		if(k%2 == 1){
+			x = (x*y)%MOD;
+		}
+		y = (y*y)%MOD; // squaring the base
+		k /= 2;
+	}
+	return x%MOD;
+}
+endsnippet
 # vim:ft=snippets:
