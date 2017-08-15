@@ -195,3 +195,35 @@ snippet dk "api doc"
         code:
 
 endsnippet
+
+snippet setup.py "setup.py content"
+PACKAGE = "${1}"
+NAME = "${2}"
+DESCRIPTION = "${3}"
+AUTHOR = "MikeCoder"
+AUTHOR_EMAIL = "mike@mikecoder.cn"
+URL = "http://mikecoder.cn"
+VERSION = __import__(PACKAGE).__version__
+
+setup(
+    name=NAME,
+    version=VERSION,
+    description=DESCRIPTION,
+    long_description=read("README.md"),
+    author=AUTHOR,
+    author_email=AUTHOR_EMAIL,
+    license="BSD",
+    url=URL,
+    packages=find_packages(exclude=["tests.*", "tests"]),
+    package_data=find_package_data(
+			PACKAGE,
+			only_in_packages=False
+	  ),
+    classifiers=[
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+    ],
+    zip_safe=False,
+)
+endsnippet
