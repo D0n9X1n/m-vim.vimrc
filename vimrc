@@ -560,3 +560,6 @@ noremap<right> :bn<CR>
 
 " 允许编辑窗口大小
 set modifiable
+
+" c++ public 顶格
+set cinoptions+=g0
