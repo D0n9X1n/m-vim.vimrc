@@ -213,28 +213,26 @@ call plug#end()
 
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
-    " let g:ycm_key_list_select_completion=['<c-n>']
+    "let g:ycm_key_list_select_completion=['<c-n>']
     let g:ycm_key_list_select_completion = ['<Down>']
-    " let g:ycm_key_list_previous_completion=['<c-p>']
+    "let g:ycm_key_list_previous_completion=['<c-p>']
     let g:ycm_key_list_previous_completion = ['<Up>']
     let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
     let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
-    " let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
-    " let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
-    " let g:ycm_collect_identifiers_from_tags_files = 1
+    let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
+    let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
+    let g:ycm_collect_identifiers_from_tags_files = 1
     " 开启语法关键字补全
-    let g:ycm_seed_identifiers_with_syntax = 1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+    let g:ycm_seed_identifiers_with_syntax=1
+    " 回车作为选中
+    let g:ycm_key_list_stop_completion = ['<CR>']
 
-    let g:ycm_autoclose_preview_window_after_insertion = 1
-    let g:ycm_min_num_identifier_candidate_chars = 2
-    let g:ycm_min_num_of_chars_for_completion = 2
-
-    " debug, info, warning, error, critical
-    let g:ycm_log_level = 'critical'
-    let g:ycm_keep_logfiles = 0
+    let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
 
     " 跳转到定义处, 分屏打开
     let g:ycm_goto_buffer_command = 'horizontal-split'
+    let g:ycm_register_as_syntastic_checker = 0
+    " nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
     nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
     nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 
@@ -249,18 +247,12 @@ call plug#end()
     endif
 
     " 直接触发自动补全 insert模式下
-    let g:ycm_auto_trigger = 1
-
+    " let g:ycm_key_invoke_completion = '<C-Space>'
     " 黑名单,不启用
     let g:ycm_filetype_blacklist = {
         \ 'tagbar' : 1,
         \ 'gitcommit' : 1,
-        \ 'js': 1,
-        \ 'vimrc': 1,
-        \ 'md': 1,
         \}
-
-    let g:ycm_disable_for_files_larger_than_kb = 20
 " }}}
 
 " ultisnips {{{
