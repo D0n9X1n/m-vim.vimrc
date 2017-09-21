@@ -586,8 +586,7 @@ call plug#end()
 " }}}
 
 " markdown-preview.vim {{{
-    let g:MarkDownResDir = '/Users/Mike/.vim/MarkDownRes'
-    let g:SourceMarkDownResDir = '/Users/Mike/.vim/bundle/markdown-preview.vim/resources'
+    let g:PluginDir = '/Users/Mike/Workspace/vim-code/markdown-preview.vim'
 " }}}
 
 " markdown.vim {{{
