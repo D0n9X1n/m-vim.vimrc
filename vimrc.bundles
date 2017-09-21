@@ -585,8 +585,13 @@ call plug#end()
     map <leader>m :MarkdownPreview github<CR>
 " }}}
 
+" markdown-preview.vim {{{
+    let g:MarkDownResDir = '/Users/Mike/.vim/MarkDownRes'
+    let g:SourceMarkDownResDir = '/Users/Mike/.vim/bundle/markdown-preview.vim/resources'
+" }}}
+
 " markdown.vim {{{
-    let g:vim_markdown_frontmatter=1
+    let g:vim_markdown_frontmatter = 1
 " }}}
 
 " quickrun.vim {{{
