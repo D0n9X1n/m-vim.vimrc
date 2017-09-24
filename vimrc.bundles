@@ -213,9 +213,7 @@ call plug#end()
 
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
-    "let g:ycm_key_list_select_completion=['<c-n>']
     let g:ycm_key_list_select_completion = ['<Down>']
-    "let g:ycm_key_list_previous_completion=['<c-p>']
     let g:ycm_key_list_previous_completion = ['<Up>']
     let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
     let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
@@ -227,12 +225,10 @@ call plug#end()
     " 回车作为选中
     let g:ycm_key_list_stop_completion = ['<CR>']
 
-    let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
-
     " 跳转到定义处, 分屏打开
     let g:ycm_goto_buffer_command = 'horizontal-split'
-    let g:ycm_register_as_syntastic_checker = 0
-    " nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+    let g:ycm_register_as_syntastic_checker = 1
+
     nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
     nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 
