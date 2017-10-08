@@ -563,3 +563,6 @@ set modifiable
 
 " c++ public 顶格
 set cinoptions+=g0
+
+vmap "+y :w !pbcopy<CR><CR>
+nmap "+p :r !pbpaste<CR><CR>
