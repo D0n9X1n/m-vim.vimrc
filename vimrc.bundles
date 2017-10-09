@@ -596,6 +596,7 @@ call plug#end()
                 \"php": ["!php %"],
                 \"vim": ["source %"],
                 \"py": ["!python %"],
+                \"go": ["!go run %"],
                 \"git": ["!git add.", "git commit -am '%'", "git push origin master"],
                 \"md": ["MarkdownPreview github"],
             \}
