@@ -604,5 +604,14 @@ autocmd FileType vim,tex let b:autoformat_autoindent=0
 au BufWrite * :Autoformat
 " map <leader>z :Autoformat<CR>
 let g:formatter_yapf_style = 'pep8'
+
+let b:formatdef_mcformat='"astyle --mode=c --suffix=none"'
+let b:formatters_c = ['mcformat']
+
+let b:formatdef_mcppformat='"astyle --mode=cpp --suffix=none"'
+let b:formatters_cpp = ['mcppformat']
+
+let b:formatdef_mphpformat='"astyle --mode=php --suffix=none"'
+let b:formatters_php = ['mphpformat']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
