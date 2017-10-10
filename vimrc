@@ -272,8 +272,10 @@ nnoremap gj j
 " I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
 noremap <F1> <Esc>"
 
-" F3 显示可打印字符开关
-nnoremap <F3> :set list! list?<CR>
+" " F3 显示可打印字符开关
+" nnoremap <F3> :set list! list?<CR>
+" F3 格式化代码
+noremap <F3> :Autoformat<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
