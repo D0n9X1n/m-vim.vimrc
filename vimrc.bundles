@@ -600,7 +600,7 @@ let g:quickrun_known_file_types = {
             \}
 " }}}
 " vim-autoformat {{{
-au BufWrite * :Autoformat
+map <leader>z :Autoformat
 let g:formatter_yapf_style = 'pep8'
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
