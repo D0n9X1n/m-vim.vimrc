@@ -619,14 +619,11 @@ au BufWrite *.htm :Autoformat
 
 let g:formatter_yapf_style = 'pep8'
 
-let b:formatdef_mcformat='"astyle --suffix=none --indent-switches"'
+let b:formatdef_mcformat='"astyle"'
 let b:formatters_c = ['mcformat']
 
-let b:formatdef_mcppformat='"astyle --suffix=none --indent-switches"'
+let b:formatdef_mcppformat='"astyle"'
 let b:formatters_cpp = ['mcppformat']
-
-let b:formatdef_mphpformat='"astyle --suffix=none --indent-switches"'
-let b:formatters_php = ['mphpformat']
 " }}}
 
 " open-in-browser {{{
