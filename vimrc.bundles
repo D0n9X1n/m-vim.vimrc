@@ -21,11 +21,11 @@ filetype off " required! turn off
 
 call plug#begin('~/.vim/bundle')
 
+" CSS
+Plug 'https://github.com/gorodinskiy/vim-coloresque.git'
+
 " CodeFormat
 Plug 'Chiel92/vim-autoformat'
-
-" QuickRun
-Plug 'MikeCoder/quickrun.vim'
 
 " Wakatime 统计, 需要的自己打开
 Plug 'wakatime/vim-wakatime'
@@ -49,6 +49,12 @@ Plug 'plasticboy/vim-markdown'
 
 " Code fold
 Plug 'MikeCoder/code-fold.vim'
+
+" QuickRun
+Plug 'MikeCoder/quickrun.vim'
+
+" Open In Browser
+Plug 'MikeCoder/open-in-browser.vim'
 
 " 显示线
 Plug 'Yggdroot/indentLine'
@@ -601,8 +607,20 @@ let g:quickrun_known_file_types = {
 " }}}
 " vim-autoformat {{{
 autocmd FileType vim,tex let b:autoformat_autoindent=0
-au BufWrite * :Autoformat
-" map <leader>z :Autoformat<CR>
+
+au BufWrite *.hpp :Autoformat
+au BufWrite *.h :Autoformat
+au BufWrite *.c :Autoformat
+au BufWrite *.cc :Autoformat
+au BufWrite *.cpp :Autoformat
+au BufWrite *.php :Autoformat
+au BufWrite *.go :Autoformat
+au BufWrite *.py :Autoformat
+au BufWrite *.html :Autoformat
+au BufWrite *.htm :Autoformat
+
+map <leader>z :Autoformat<CR>
+
 let g:formatter_yapf_style = 'pep8'
 
 let b:formatdef_mcformat='"astyle --mode=c --suffix=none"'
@@ -613,5 +631,9 @@ let b:formatters_cpp = ['mcppformat']
 
 let b:formatdef_mphpformat='"astyle --mode=php --suffix=none"'
 let b:formatters_php = ['mphpformat']
+" }}}
+
+" open-in-browser {{{
+map <leader>b :OpenInBrowser<CR>
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
