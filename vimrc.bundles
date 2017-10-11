@@ -606,8 +606,6 @@ let g:quickrun_known_file_types = {
             \}
 " }}}
 " vim-autoformat {{{
-autocmd FileType vim,tex let b:autoformat_autoindent=0
-
 au BufWrite *.hpp :Autoformat
 au BufWrite *.h :Autoformat
 au BufWrite *.c :Autoformat
@@ -619,17 +617,15 @@ au BufWrite *.py :Autoformat
 au BufWrite *.html :Autoformat
 au BufWrite *.htm :Autoformat
 
-map <leader>z :Autoformat<CR>
-
 let g:formatter_yapf_style = 'pep8'
 
-let b:formatdef_mcformat='"astyle --mode=c --suffix=none"'
+let b:formatdef_mcformat='"astyle --suffix=none --indent-switches"'
 let b:formatters_c = ['mcformat']
 
-let b:formatdef_mcppformat='"astyle --mode=cpp --suffix=none"'
+let b:formatdef_mcppformat='"astyle --suffix=none --indent-switches"'
 let b:formatters_cpp = ['mcppformat']
 
-let b:formatdef_mphpformat='"astyle --mode=php --suffix=none"'
+let b:formatdef_mphpformat='"astyle --suffix=none --indent-switches"'
 let b:formatters_php = ['mphpformat']
 " }}}
 
