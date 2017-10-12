@@ -220,6 +220,8 @@ let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java', 'md'
 
 " YouCompleteMe {{{
 "youcompleteme  默认tab  s-tab 和自动补全冲突
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
