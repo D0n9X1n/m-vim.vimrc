@@ -57,7 +57,7 @@ Plug 'MikeCoder/quickrun.vim'
 Plug 'MikeCoder/open-in-browser.vim'
 
 " 显示线
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " syntastic
 Plug 'scrooloose/syntastic'
@@ -550,21 +550,24 @@ let g:vim_markdown_new_list_item_indent = 4
 map <leader>s :Ag
 " }}}
 
-" indentLine.vim {{{
-let g:indentLine_enabled = 0
-let g:indentLine_color_term = 159
-let g:indentLine_char = '¦'
-let g:indentLine_setColors = 2
+" " indentLine.vim {{{
+" set conceallevel=1
+" let g:indentLine_conceallevel=1
 
-let g:indentLine_bgcolor_term = 1
-let g:indentLine_bgcolor_gui = '#222222'
+" let g:indentLine_enabled = 1
+" let g:indentLine_color_term = 159
+" let g:indentLine_char = '¦'
+" let g:indentLine_setColors = 2
 
-"GVim
-let g:indentLine_color_gui = '#8a7f80'
+" let g:indentLine_bgcolor_term = 1
+" let g:indentLine_bgcolor_gui = '#222222'
 
-" none X terminal
-let g:indentLine_color_tty_light = 2 " (default: 4)
-let g:indentLine_color_dark = 1 " (default: 2)
+" "GVim
+" let g:indentLine_color_gui = '#8a7f80'
+
+" " none X terminal
+" let g:indentLine_color_tty_light = 2 " (default: 4)
+" let g:indentLine_color_dark = 1 " (default: 2)
 " }}}
 
 " minibufexpl {{{
