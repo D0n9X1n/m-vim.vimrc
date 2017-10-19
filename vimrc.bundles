@@ -626,12 +626,12 @@ au BufWrite *.htm :Autoformat
 let g:formatter_yapf_style = 'pep8'
 
 " CPP
-let b:formatdef_custom_cpp='"clang-format -style=\"Google\""'
-let b:formatters_cpp = ['custom_cpp']
+let g:formatdef_custom_cpp='"astyle --mode=c --suffix=none --style=linux --indent=tab"'
+let g:formatters_cpp = ['custom_cpp']
 
 " C
-let b:formatdef_custom_c='"astyle --mode=c --suffix=none --options=~/.astylerc"'
-let b:formatters_c = ['custom_c']
+let g:formatdef_custom_c='"astyle --suffix=none --style=linux --indent=tab"'
+let g:formatters_c = ['custom_c']
 " }}}
 
 " open-in-browser {{{
