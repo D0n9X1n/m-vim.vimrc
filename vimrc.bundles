@@ -610,6 +610,8 @@ let g:quickrun_known_file_types = {
             \"md": ["MarkdownPreview github"],
             \}
 " }}}
+
+
 " vim-autoformat {{{
 au BufWrite *.hpp :Autoformat
 au BufWrite *.h :Autoformat
@@ -623,12 +625,6 @@ au BufWrite *.html :Autoformat
 au BufWrite *.htm :Autoformat
 
 let g:formatter_yapf_style = 'pep8'
-
-let b:formatdef_mcformat='"astyle"'
-let b:formatters_c = ['mcformat']
-
-let b:formatdef_mcppformat='"astyle"'
-let b:formatters_cpp = ['mcppformat']
 " }}}
 
 " open-in-browser {{{
