@@ -243,13 +243,15 @@ nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 
 " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
 " old version
-if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-    let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
-endif
-" new version
-if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-    let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-endif
+" if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
+    " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+" endif
+" " new version
+" if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
+    " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+" endif
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/ycmconfig.py"
 
 " 直接触发自动补全 insert模式下
 " let g:ycm_key_invoke_completion = '<C-Space>'
@@ -307,7 +309,7 @@ let g:closetag_html_style=1
 
 " nerdcommenter {{{
 let g:NERDSpaceDelims=1
-let g:NERDCustomDelimiters = { 'c': { 'left': '/*','right': '*/' } }
+let g:NERDCustomDelimiters = { 'c': { 'left': '/*','right': '*/' } , 'cpp': {'left': '/*', 'right': '*/'}}
 " }}}
 
 " trailingwhitespace {{{
@@ -445,7 +447,7 @@ let g:solarized_visibility="normal"
 " nerdtree nerdtreetabs {{{
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=[ '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', 'tags' ]
+let NERDTreeIgnore=[ '\.pyc$', '\.o$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', 'tags' ]
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 " s/v 分屏打开文件
@@ -620,9 +622,6 @@ au BufWrite *.c :Autoformat
 au BufWrite *.cc :Autoformat
 au BufWrite *.cpp :Autoformat
 au BufWrite *.go :Autoformat
-au BufWrite *.py :Autoformat
-au BufWrite *.html :Autoformat
-au BufWrite *.htm :Autoformat
 
 let g:formatter_yapf_style = 'pep8'
 
