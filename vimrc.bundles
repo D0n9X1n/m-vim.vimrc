@@ -307,6 +307,7 @@ let g:closetag_html_style=1
 
 " nerdcommenter {{{
 let g:NERDSpaceDelims=1
+let g:NERDCustomDelimiters = { 'c': { 'left': '/*','right': '*/' } }
 " }}}
 
 " trailingwhitespace {{{
@@ -444,7 +445,7 @@ let g:solarized_visibility="normal"
 " nerdtree nerdtreetabs {{{
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', 'tags' ]
+let NERDTreeIgnore=[ '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', 'tags' ]
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 " s/v 分屏打开文件
@@ -601,7 +602,7 @@ let g:vim_markdown_frontmatter = 1
 " quickrun.vim {{{
 let g:quickrun_known_file_types = {
             \"cpp": ["!g++ -g %", "./a.out"],
-            \"c": ["!g++ -g %", "./a.out"],
+            \"c": ["!gcc -g %", "./a.out"],
             \"php": ["!php %"],
             \"vim": ["source %"],
             \"py": ["!python %"],
