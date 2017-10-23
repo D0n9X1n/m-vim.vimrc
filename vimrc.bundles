@@ -616,21 +616,21 @@ let g:quickrun_known_file_types = {
 
 
 " vim-autoformat {{{
-au BufWrite *.hpp :Autoformat
-au BufWrite *.h :Autoformat
-au BufWrite *.c :Autoformat
-au BufWrite *.cc :Autoformat
-au BufWrite *.cpp :Autoformat
-au BufWrite *.go :Autoformat
+" au BufWrite *.hpp :Autoformat
+" au BufWrite *.h :Autoformat
+" au BufWrite *.c :Autoformat
+" au BufWrite *.cc :Autoformat
+" au BufWrite *.cpp :Autoformat
+" au BufWrite *.go :Autoformat
 
 let g:formatter_yapf_style = 'pep8'
 
 " CPP
-let g:formatdef_custom_cpp='"astyle --mode=c --suffix=none --style=linux --indent=tab"'
+let g:formatdef_custom_cpp='"astyle --mode=c --suffix=none --style=linux -s"'
 let g:formatters_cpp = ['custom_cpp']
 
 " C
-let g:formatdef_custom_c='"astyle --suffix=none --style=linux --indent=tab"'
+let g:formatdef_custom_c='"astyle --suffix=none --style=linux -s"'
 let g:formatters_c = ['custom_c']
 " }}}
 
