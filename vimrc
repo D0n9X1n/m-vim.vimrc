@@ -1,6 +1,5 @@
 "==========================================
 " Author:  mike
-" Version: 1.0.1
 " Email: mike@mikecoder.cn
 " ReadMe: README.md
 " Sections:
