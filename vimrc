@@ -269,26 +269,19 @@ nnoremap gj j
 
 " F1 废弃这个键,防止调出系统帮助
 " I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
-noremap <F1> <Esc>"
-
-" " F3 显示可打印字符开关
-" nnoremap <F3> :set list! list?<CR>
+nnoremap <F1> <Esc>"
 " F3 格式化代码
-noremap <F3> :Autoformat<CR>
+nnoremap <F3> :Autoformat<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
-
 " F5 快速运行
 nnoremap <F5> :QuickRun<cr>
-
 " F6 开关相对行号
 nnoremap <F6> :call NumberToggle()<cr>
-
 " F7 语法开关，关闭语法可以加快大文件的展示
 nnoremap <F7> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 " F8 定位线开关，可以加快大文件显示速度
-" nnoremap <F8> : IndentLinesToggle <CR>
-
+nnoremap <F8> : IndentLinesToggle <CR>
 " F12 查看修改部分 (GIT)
 nnoremap <F12> : GitGutterToggle<CR>
 
