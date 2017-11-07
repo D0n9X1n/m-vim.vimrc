@@ -22,7 +22,7 @@ filetype off " required! turn off
 call plug#begin('~/.vim/bundle')
 
 " CSS
-Plug 'https://github.com/gorodinskiy/vim-coloresque.git'
+" Plug 'https://github.com/gorodinskiy/vim-coloresque.git'
 
 " CodeFormat
 Plug 'Chiel92/vim-autoformat'
@@ -447,7 +447,7 @@ let g:solarized_termcolors=256
 " nerdtree nerdtreetabs {{{
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=[ '\.pyc$', '\.o$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', 'tags' ]
+let NERDTreeIgnore=[ '\.pyc$', '\.o$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', 'tags', '\.test$' , '\.dSYM$']
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 " s/v 分屏打开文件
