@@ -48,7 +48,7 @@ Plug 'MikeCoder/markdown-preview.vim'
 Plug 'plasticboy/vim-markdown'
 
 " Code fold
-" Plug 'MikeCoder/code-fold.vim'
+Plug 'MikeCoder/code-fold.vim'
 
 " QuickRun
 Plug 'MikeCoder/quickrun.vim'
@@ -608,7 +608,7 @@ let g:quickrun_known_file_types = {
 " au BufWrite *.go :Autoformat
 
 let g:formatter_yapf_style = 'pep8'
-let g:autoformat_verbosemode = 1
+" let g:autoformat_verbosemode = 1
 
 " CPP
 let g:formatdef_custom_cpp='"astyle --suffix=none --style=linux -s"'
