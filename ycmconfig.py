@@ -65,23 +65,13 @@ flags = [
         '.',
         '-I',
         './ClangCompleter',
-        '-isystem',
-        './tests/gmock/gtest',
-        '-isystem',
-        './tests/gmock/gtest/include',
-        '-isystem',
-        './tests/gmock',
-        '-isystem',
-        './tests/gmock/include',
-        '-isystem',
-        './benchmarks/benchmark/include',
         ]
 
 # Clang automatically sets the '-std=' flag to 'c++14' for MSVC 2015 or later,
 # which is required for compiling the standard library, and to 'c++11' for older
 # versions.
 if platform.system() != 'Windows':
-    flags.append( '-std=c++14' )
+    flags.append( '-std=c++11' )
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
