@@ -453,6 +453,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " s/v 分屏打开文件
 let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
+let g:NERDTreeWinSize = 25
 
 " nerdtreetabs
 " 关闭同步
@@ -523,6 +524,7 @@ let g:tagbar_type_go = {
             \ 'ctagsbin'  : 'gotags',
             \ 'ctagsargs' : '-sort -silent'
             \ }
+let g:tagbar_width = 30
 " }}}
 
 
