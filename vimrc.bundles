@@ -244,11 +244,11 @@ nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
 " old version
 " if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-    " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+" let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
 " endif
 " " new version
 " if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-    " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+" let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 " endif
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/ycmconfig.py"
@@ -447,7 +447,11 @@ let g:solarized_termcolors=256
 " nerdtree nerdtreetabs {{{
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=[ '\.pyc$', '\.o$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', 'tags', '\.test$' , '\.dSYM$']
+let NERDTreeIgnore = [
+            \ '\.pyc$', '\.o$', '\.egg$', '^\.git$',
+            \ '^\.svn$', '^\.hg$', 'tags', '\.test$',
+            \ '\.dSYM$', '\.a$', '\.so$'
+            \]
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 " s/v 分屏打开文件
@@ -589,12 +593,12 @@ let g:vim_markdown_frontmatter = 1
 
 " quickrun.vim {{{
 let g:quickrun_known_file_types = {
-            \"cpp": ["!g++ -g -std=c++11 %", "./a.out"],
-            \"c": ["!gcc -g %", "./a.out"],
-            \"php": ["!php %"],
-            \"vim": ["source %"],
-            \"py": ["!python %"],
-            \"go": ["!go run %"],
+            \"cpp": ["!g++ -g -std=c++11 \"%\"", "./a.out"],
+            \"c": ["!gcc -g \"%\"", "./a.out"],
+            \"php": ["!php \"%\""],
+            \"vim": ["source \"%\""],
+            \"py": ["!python \"%\""],
+            \"go": ["!go run \"%\""],
             \"git": ["!git add.", "git commit -am '%'", "git push origin master"],
             \"md": ["MarkdownPreview github"],
             \}
