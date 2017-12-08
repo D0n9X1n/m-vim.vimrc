@@ -54,7 +54,7 @@ Plug 'MikeCoder/code-fold.vim'
 Plug 'MikeCoder/quickrun.vim'
 
 " Open In Browser
-Plug 'MikeCoder/open-in-browser.vim'
+" Plug 'MikeCoder/open-in-browser.vim'
 
 " 显示线
 Plug 'Yggdroot/indentLine'
@@ -601,6 +601,7 @@ let g:quickrun_known_file_types = {
             \"go": ["!go run \"%\""],
             \"git": ["!git add.", "git commit -am '%'", "git push origin master"],
             \"md": ["MarkdownPreview github"],
+            \"html": ["!open \"%\""],
             \}
 " }}}
 
