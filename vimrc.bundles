@@ -22,7 +22,10 @@ filetype off " required! turn off
 call plug#begin('~/.vim/bundle')
 
 " CSS
-" Plug 'https://github.com/gorodinskiy/vim-coloresque.git'
+Plug 'gko/vim-coloresque'
+
+" HTML
+Plug 'mattn/emmet-vim'
 
 " CodeFormat
 Plug 'Chiel92/vim-autoformat'
@@ -52,9 +55,6 @@ Plug 'MikeCoder/code-fold.vim'
 
 " QuickRun
 Plug 'MikeCoder/quickrun.vim'
-
-" Open In Browser
-" Plug 'MikeCoder/open-in-browser.vim'
 
 " 显示线
 Plug 'Yggdroot/indentLine'
@@ -139,7 +139,7 @@ Plug 'airblade/vim-gitgutter'
 
 " gundo
 " edit history, 可以查看回到某个历史状态
-" Plug 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 
 " view
 " airline
@@ -605,6 +605,14 @@ let g:quickrun_known_file_types = {
             \}
 " }}}
 
+" emmet-vim {{{
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+" }}}
+
+" vim-css-color {{{
+let g:cssColorVimDoNotMessMyUpdatetime = 5
+" }}}
 
 " vim-autoformat {{{
 " au BufWrite *.hpp :Autoformat
@@ -624,9 +632,5 @@ let g:formatters_cpp = ['custom_cpp']
 " C
 let g:formatdef_custom_c='"astyle --suffix=none --style=linux -s"'
 let g:formatters_c = ['custom_c']
-" }}}
-
-" open-in-browser {{{
-map <leader>b :OpenInBrowser<CR>
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
