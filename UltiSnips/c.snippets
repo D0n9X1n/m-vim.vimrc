@@ -103,7 +103,6 @@ if (${1}) {
 }
 endsnippet
 
-
 snippet chead "#ifndef ... #define ... #endif"
 #ifndef ${1/([A-Za-z0-9_]+).*/$1/}
 #define ${1:SYMBOL} ${2:VALUE}
@@ -129,6 +128,7 @@ void swap(int & a, int & b) {
 	a = b;
 	b = c;
 }
+
 int gcd(int a,int b) {
 	if(0 == a) {
 		return b;
@@ -154,3 +154,18 @@ int bc(unsigned int n) {
 }
 endsnippet
 
+
+snippet isPrime "is prime"
+bool isPrime(int num)
+{
+    if(num == 2 || num == 3)
+        return 1 ;
+    if(num % 6 != 1 && num % 6 != 5)
+        return 0 ;
+    int tmp = sqrt(num);
+    for(int i = 5; i <= tmp; i += 6 )
+        if(num % i == 0 || num % (i + 2) == 0)
+            return 0 ;
+    return 1 ;
+}
+endsnippet
