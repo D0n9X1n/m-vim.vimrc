@@ -626,11 +626,11 @@ let g:formatter_yapf_style = 'pep8'
 " let g:autoformat_verbosemode = 1
 
 " CPP
-let g:formatdef_custom_cpp='"astyle --suffix=none --style=linux -s"'
+let g:formatdef_custom_cpp='"astyle --suffix=none --style=java -s -S"'
 let g:formatters_cpp = ['custom_cpp']
 
 " C
-let g:formatdef_custom_c='"astyle --suffix=none --style=linux -s"'
+let g:formatdef_custom_c='"astyle --suffix=none --style=java -s -S"'
 let g:formatters_c = ['custom_c']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
