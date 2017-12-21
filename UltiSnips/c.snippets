@@ -38,41 +38,6 @@ ${1}
 }
 endsnippet
 
-snippet acm
-#include <cstdio>
-#include <climits>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
-#include <cmath>
-#include <iostream>
-#include <sstream>
-#include <algorithm>
-#include <vector>
-#include <set>
-#include <map>
-#include <bitset>
-#include <stack>
-#include <string>
-#include <queue>
-#include <list>
-#include <iomanip>
-#include <limits>
-#include <typeinfo>
-#include <functional>
-#include <numeric>
-#include <complex>
-
-using namespace std;
-
-${1}
-
-int main() {
-	ios::sync_with_stdio(false);
-	return 0;
-}
-endsnippet
-
 snippet while
 while (${1}) {
 	${2}
@@ -80,21 +45,10 @@ while (${1}) {
 endsnippet
 
 snippet fori
-for (int i = 0; i < ${1}; i++) {
+int i;
+for (i = 0; i < ${1}; i++) {
 	${2}
 }
-endsnippet
-
-snippet in
-cin >> ${1} >> ${2};
-endsnippet
-
-snippet out
-cout << ${1} << endl;
-endsnippet
-
-snippet cout
-cout << ${1} << endl;
 endsnippet
 
 snippet if
