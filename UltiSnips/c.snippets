@@ -1,6 +1,20 @@
+priority -48
 snippet cmp
 int cmp(const void* a, const void* b) {
     return *(int*)a - *(int*)b;
+}
+endsnippet
+
+snippet fori
+int i;
+for (i = 0; i < ${1}; i++) {
+	${2}
+}
+endsnippet
+
+snippet for
+for (i = 0; i < ${1}; i++) {
+	${2}
 }
 endsnippet
 
@@ -44,13 +58,6 @@ while (${1}) {
 }
 endsnippet
 
-snippet fori
-int i;
-for (i = 0; i < ${1}; i++) {
-	${2}
-}
-endsnippet
-
 snippet if
 if (${1}) {
 	${2}
@@ -76,50 +83,4 @@ ${1:void}
 ${2:function_name}($3);
 endsnippet
 
-snippet gcd "function gcd"
-void swap(int & a, int & b) {
-	int c = a;
-	a = b;
-	b = c;
-}
 
-int gcd(int a,int b) {
-	if(0 == a) {
-		return b;
-	}
-	if(0 == b) {
-		return a;
-	}
-	if(a > b) {
-		swap(a,b);
-	}
-	for(int c = a % b; c > 0; c = a % b) {
-		a = b;
-		b = c;
-	}
-	return b;
-}
-endsnippet
-
-snippet bc "function bit count"
-int bc(unsigned int n) {
-	unsigned int tmp = n - ((n >>1) &033333333333) - ((n >>2) &011111111111);
-	return ((tmp + (tmp >>3)) &030707070707) %63;
-}
-endsnippet
-
-
-snippet isPrime "is prime"
-bool isPrime(int num)
-{
-    if(num == 2 || num == 3)
-        return 1 ;
-    if(num % 6 != 1 && num % 6 != 5)
-        return 0 ;
-    int tmp = sqrt(num);
-    for(int i = 5; i <= tmp; i += 6 )
-        if(num % i == 0 || num % (i + 2) == 0)
-            return 0 ;
-    return 1 ;
-}
-endsnippet

@@ -1,8 +1,22 @@
-priority -50
+priority -46
 
-extends c
+snippet cmp
+bool cmp(const ${1} a, const ${2} b) {
+	${3}
+}
+endsnippet
 
-priority -48
+snippet fori
+for (size_t i = 0; i < ${1}; i++) {
+	${2}
+}
+endsnippet
+
+snippet for
+for (i = 0; i < ${1}; i++) {
+	${2}
+}
+endsnippet
 
 global !p
 
@@ -34,11 +48,6 @@ snippet cout
 cout << ${1} << endl;
 endsnippet
 
-snippet fori
-for (int i = 0; i < ${1}; i++) {
-	${2}
-}
-endsnippet
 
 snippet acm
 #include <cstdio>
@@ -319,4 +328,64 @@ snippet pii "pair<int, int>"
 #define ppiipii pair<pair<int, int>, pair<int, int>>
 endsnippet
 
-# vim:ft=snippets:
+
+snippet prime "is prime"
+bool isPrime(int num)
+{
+    if(num == 2 || num == 3)
+        return 1 ;
+    if(num % 6 != 1 && num % 6 != 5)
+        return 0 ;
+    int tmp = sqrt(num);
+    for(int i = 5; i <= tmp; i += 6 )
+        if(num % i == 0 || num % (i + 2) == 0)
+            return 0 ;
+    return 1 ;
+}
+endsnippet
+
+
+snippet gcd "function gcd"
+void swap(int & a, int & b) {
+	int c = a;
+	a = b;
+	b = c;
+}
+
+int gcd(int a,int b) {
+	if(0 == a) {
+		return b;
+	}
+	if(0 == b) {
+		return a;
+	}
+	if(a > b) {
+		swap(a,b);
+	}
+	for(int c = a % b; c > 0; c = a % b) {
+		a = b;
+		b = c;
+	}
+	return b;
+}
+endsnippet
+
+snippet bc "function bit count"
+int bc(unsigned int n) {
+	unsigned int tmp = n - ((n >>1) &033333333333) - ((n >>2) &011111111111);
+	return ((tmp + (tmp >>3)) &030707070707) %63;
+}
+endsnippet
+
+snippet while
+while (${1}) {
+	${2}
+}
+endsnippet
+
+snippet if
+if (${1}) {
+	${2}
+}
+endsnippet
+
