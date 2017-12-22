@@ -162,7 +162,7 @@ int kmp(string haystack, string needle) {
     if (!n) return 0;
     vector<int> lps = __next(needle);
     for (int i = 0, j = 0; i < m; ) {
-        if (haystack[i] == needle[j]) { 
+        if (haystack[i] == needle[j]) {
             i++;
             j++;
         }
@@ -323,9 +323,9 @@ int powMod(int base,int k,int MOD){
 endsnippet
 
 snippet pii "pair<int, int>"
-#define pii pair<int, int>
-#define ppiii pair<pair<int, int>, int>
-#define ppiipii pair<pair<int, int>, pair<int, int>>
+typedef pair<int, int> pii
+typedef pair<pii, int> ppiii
+typedef pair<pii, pii> ppiipii
 endsnippet
 
 
