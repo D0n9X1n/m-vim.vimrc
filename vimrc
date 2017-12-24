@@ -144,7 +144,7 @@ set matchtime=2
 " 高亮search命中的文本
 set hlsearch
 " 打开增量搜索模式,随着键入即时搜索
-set incsearch
+" set incsearch
 " 搜索时忽略大小写
 set ignorecase
 " 有一个或以上大写字母时仍大小写敏感
