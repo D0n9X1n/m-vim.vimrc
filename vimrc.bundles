@@ -419,7 +419,8 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 " }}}
 
 " airline-theme {{{
-let g:airline_theme = 'base16'
+let g:airline_theme = 'solarized'
+let g:airline_solarized_bg='dark'
 " }}}
 
 " airline {{{
@@ -430,7 +431,7 @@ let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '❯'
 let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
-let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.linenr = '∫'
 let g:airline_symbols.branch = '⎇'
 " 是否打开tabline
 " let g:airline#extensions#tabline#enabled = 1
