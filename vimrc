@@ -28,7 +28,7 @@ syntax on
 
 " install bundles
 if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+    source ~/.vimrc.bundles
 endif
 
 " ensure ftdetect et al work by including this after the bundle stuff
@@ -188,11 +188,11 @@ set norelativenumber number
 " autocmd InsertEnter * :set norelativenumber number
 " autocmd InsertLeave * :set norelativenumber number
 function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber number
-  else
-    set relativenumber
-  endif
+    if(&relativenumber == 1)
+        set norelativenumber number
+    else
+        set relativenumber
+    endif
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
@@ -243,7 +243,7 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 " 打开自动定位到最后编辑的位置, 需要确认 .viminfo 当前用户可写
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 "==========================================
@@ -295,9 +295,9 @@ let &t_EI .= "\<Esc>[?2004l"
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
+    set pastetoggle=<Esc>[201~
+    set paste
+    return ""
 endfunction
 
 " 分屏窗口移动, Smart way to move between windows
@@ -437,8 +437,8 @@ nnoremap <C-y> 2<C-y>
 "nmap t o<ESC>k
 "nmap T O<ESC>j
 
-" Quickly close the current window
-nnoremap <leader>q :q<CR>
+" Quickly close the current buffer
+nnoremap <leader>q :bdelete<CR>
 
 " Quickly save the current file
 nnoremap <leader>w :w<CR>
@@ -497,11 +497,11 @@ endfunc
 
 " 设置可以高亮的关键字
 if has("autocmd")
-  " Highlight TODO, FIXME, NOTE, etc.
-  if v:version > 701
-    autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|DONE\|XXX\|BUG\|HACK\)')
-    autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\|NOTICE\)')
-  endif
+    " Highlight TODO, FIXME, NOTE, etc.
+    if v:version > 701
+        autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|DONE\|XXX\|BUG\|HACK\)')
+        autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\|NOTICE\)')
+    endif
 endif
 
 "==========================================
