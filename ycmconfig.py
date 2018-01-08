@@ -56,6 +56,8 @@ flags = [
         '-isystem',
         '../BoostParts',
         '-isystem',
+        '/usr/local/include',
+        '-isystem',
         get_python_inc(),
         '-isystem',
         '../llvm/include',
