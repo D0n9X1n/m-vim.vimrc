@@ -236,7 +236,7 @@ let g:ycm_key_list_stop_completion = ['<CR>']
 
 " 跳转到定义处, 分屏打开
 let g:ycm_goto_buffer_command = 'horizontal-split'
-let g:ycm_register_as_syntastic_checker = 1
+let g:ycm_register_as_syntastic_checker = 0
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
@@ -630,11 +630,11 @@ let g:formatter_yapf_style = 'pep8'
 " let g:autoformat_verbosemode = 1
 
 " CPP
-let g:formatdef_custom_cpp='"astyle --suffix=none --style=java -s -S"'
-let g:formatters_cpp = ['custom_cpp']
+" let g:formatdef_custom_cpp='"astyle --suffix=none --style=java -s -S"'
+" let g:formatters_cpp = ['custom_cpp']
 
-" C
-let g:formatdef_custom_c='"astyle --suffix=none --style=java -s -S"'
-let g:formatters_c = ['custom_c']
+" " C
+" let g:formatdef_custom_c='"astyle --suffix=none --style=java -s -S"'
+" let g:formatters_c = ['custom_c']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------

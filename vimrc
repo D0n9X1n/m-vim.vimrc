@@ -509,9 +509,9 @@ endif
 "==========================================
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Microsoft\ YaHei\ Mono:h13
+    set guifont=Source\ Code\ Pro:h13
     if has("gui_gtk2")   "GTK2
-        set guifont=Monaco\ 13,Monospace\ 13
+        set guifont=Source\ Code\ Pro:h13
     endif
 endif
 
