@@ -207,8 +207,8 @@ function! ToggleErrors()
     endif
 endfunction
 " nnoremap <Leader>s :call ToggleErrors()<cr>
-nnoremap <Leader>sn :lnext<cr>
-nnoremap <Leader>sp :lprevious<cr>
+" nnoremap <Leader>sn :lnext<cr>
+" nnoremap <Leader>sp :lprevious<cr>
 
 " 修改高亮的背景色, 适应主题
 highlight SyntasticErrorSign guifg=white guibg=black
@@ -219,27 +219,29 @@ let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java', 'md'
 
 
 " YouCompleteMe {{{
-"youcompleteme  默认tab  s-tab 和自动补全冲突
-let g:ycm_show_diagnostics_ui = 1
-let g:ycm_enable_diagnostic_signs = 1
+" youcompleteme  默认tab  s-tab 和自动补全冲突
+let g:ycm_show_diagnostics_ui=1
+let g:ycm_enable_diagnostic_signs=0
+let g:ycm_enable_diagnostic_highlighting=1
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
-let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
-let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
+let g:ycm_complete_in_comments=1  "在注释输入中也能补全
+let g:ycm_complete_in_strings=1   "在字符串输入中也能补全
 let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
-let g:ycm_collect_identifiers_from_comments_and_strings = 0   "注释和字符串中的文字也会被收入补全
-let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_collect_identifiers_from_comments_and_strings=0   "注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_tags_files=1
 " 开启语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
 " 回车作为选中
-let g:ycm_key_list_stop_completion = ['<CR>']
+let g:ycm_key_list_stop_completion=['<CR>']
 
 " 跳转到定义处, 分屏打开
-let g:ycm_goto_buffer_command = 'horizontal-split'
-let g:ycm_register_as_syntastic_checker = 0
+let g:ycm_goto_buffer_command='horizontal-split'
+let g:ycm_register_as_syntastic_checker=1
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>ee :YcmDiags<CR>
 
 " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
 " old version
