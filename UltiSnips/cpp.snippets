@@ -246,7 +246,6 @@ endsnippet
 
 
 snippet getDivisors "get divisors"
-
 int prime[100000];
 bool isPrime[1000005];
 
@@ -342,12 +341,10 @@ endsnippet
 
 
 snippet prime "is prime"
-bool isPrime(int num)
-{
-    if(num == 2 || num == 3)
-        return 1 ;
-    if(num % 6 != 1 && num % 6 != 5)
-        return 0 ;
+bool isPrime(int num) {
+	if(num == 1) return 0;
+    if(num == 2 || num == 3) return 1 ;
+    if(num % 6 != 1 && num % 6 != 5) return 0 ;
     int tmp = sqrt(num);
     for(int i = 5; i <= tmp; i += 6 )
         if(num % i == 0 || num % (i + 2) == 0)
@@ -382,8 +379,8 @@ int gcd(int a,int b) {
 }
 endsnippet
 
-snippet bc "function bit count"
-int bc(unsigned int n) {
+snippet bit "function count bit"
+int countbit(unsigned int n) {
 	unsigned int tmp = n - ((n >>1) &033333333333) - ((n >>2) &011111111111);
 	return ((tmp + (tmp >>3)) &030707070707) %63;
 }
