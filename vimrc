@@ -509,16 +509,17 @@ endif
 "==========================================
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Source\ Code\ Pro:h13
+    set guifont=Consolas-with-Yahei:h13
     if has("gui_gtk2")   "GTK2
-        set guifont=Source\ Code\ Pro:h13
+        set guifont=Consolas-with-Yahei:h13
     endif
 endif
 
 " theme主题
 set background=dark
 set t_Co=256
-colorscheme solarized
+" colorscheme solarized
+colorscheme gruvbox
 
 " colorscheme molokai
 " colorscheme desert
