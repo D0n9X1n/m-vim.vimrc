@@ -23,6 +23,7 @@ call plug#begin('~/.vim/bundle')
 
 " ColorTheme
 Plug 'morhetz/gruvbox'
+Plug 'ashfinal/vim-colors-violet'
 
 " CSS
 Plug 'gko/vim-coloresque'
@@ -174,7 +175,7 @@ call plug#end()
 let g:syntastic_error_symbol = 'x'
 let g:syntastic_warning_symbol = 'x'
 let g:syntastic_check_on_open=0
-let g:syntastic_check_on_wq=1
+let g:syntastic_check_on_wq=0
 let g:syntastic_enable_highlighting=1
 
 " checkers
@@ -224,12 +225,12 @@ let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java', 'md'
 " YouCompleteMe {{{
 " youcompleteme  默认tab  s-tab 和自动补全冲突
 let g:ycm_show_diagnostics_ui=1
-let g:ycm_enable_diagnostic_signs=1
+let g:ycm_enable_diagnostic_signs=0
 let g:ycm_enable_diagnostic_highlighting=1
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
-let g:ycm_complete_in_comments=1  "在注释输入中也能补全
-let g:ycm_complete_in_strings=1   "在字符串输入中也能补全
+let g:ycm_complete_in_comments=0  "在注释输入中也能补全
+let g:ycm_complete_in_strings=0   "在字符串输入中也能补全
 let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
 let g:ycm_collect_identifiers_from_comments_and_strings=0   "注释和字符串中的文字也会被收入补全
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -424,8 +425,8 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 " }}}
 
 " airline-theme {{{
-let g:airline_theme = 'base16'
-" let g:airline_solarized_bg='dark'
+" let g:airline_theme = 'base16'
+let g:airline_solarized_bg='dark'
 " }}}
 
 " airline {{{

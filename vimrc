@@ -518,8 +518,8 @@ endif
 " theme主题
 set background=dark
 set t_Co=256
-" colorscheme solarized
-colorscheme gruvbox
+colorscheme solarized
+" colorscheme gruvbox
 
 " colorscheme molokai
 " colorscheme desert
