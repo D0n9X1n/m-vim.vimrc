@@ -151,6 +151,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'ashfinal/vim-colors-violet'
+Plug 'arcticicestudio/nord-vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'jdkanani/vim-material-theme'
+Plug 'cocopon/iceberg.vim'
+
 
 
 " nav
@@ -446,11 +451,11 @@ let g:airline_symbols.notexists = ' •'
 " }}}
 
 
-" solarized {{{
+" colortheme {{{
 let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 " }}}
 
 " nerdtree nerdtreetabs {{{
