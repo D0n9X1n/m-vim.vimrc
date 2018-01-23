@@ -149,9 +149,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 " ColorTheme
 Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
+Plug 'MVIM/gruvbox'
 Plug 'ashfinal/vim-colors-violet'
-Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'jdkanani/vim-material-theme'
 Plug 'cocopon/iceberg.vim'
@@ -429,7 +428,8 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 
 " airline-theme {{{
 " let g:airline_theme = 'base16'
-let g:airline_solarized_bg='dark'
+let g:airline_solarized_bg = 'dark'
+let g:gruvbox_underline = 1
 " }}}
 
 " airline {{{
@@ -574,7 +574,7 @@ map <leader>s :Ag
 " }}}
 
 " indentLine.vim {{{
-let g:indentLine_enabled = 0
+let g:indentLine_enabled = 1
 " }}}
 
 " minibufexpl {{{
