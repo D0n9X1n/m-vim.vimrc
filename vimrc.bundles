@@ -564,7 +564,7 @@ let g:go_fmt_fail_silently = 1
 
 " markdown {{{
 let g:vim_markdown_folding_disabled = 0
-let g:vim_markdown_conceal = 1
+let g:vim_markdown_conceal = 0
 let g:markdown_enable_spell_checking = 1
 let g:vim_markdown_new_list_item_indent = 4
 " }}}
