@@ -408,7 +408,7 @@ vnoremap > >gv
 map Y y$
 
 " 复制选中区到系统剪切板中
-vnoremap <leader>y "+y
+" vnoremap <leader>y "+y
 
 " auto jump to end of select
 " vnoremap <silent> y y`]
@@ -419,7 +419,7 @@ vnoremap <leader>y "+y
 map <Leader>sa ggVG"
 
 " select block
-nnoremap <leader>v V`}
+" nnoremap <leader>v V`}
 
 " w!! to sudo & write a file
 cmap w!! w !sudo tee >/dev/null %
@@ -555,3 +555,12 @@ set cc=80
 
 " vmap "+y :w !pbcopy<CR><CR>
 " nmap "+p :r !pbpaste<CR><CR>
+"
+
+" Code Fold
+set foldenable
+set foldmethod=marker
+set foldlevel=99
+
+au BufWinLeave *.* silent mkview
+au BufWinEnter *.* silent loadview

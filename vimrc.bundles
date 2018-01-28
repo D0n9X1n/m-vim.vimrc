@@ -50,9 +50,6 @@ Plug 'rking/ag.vim'
 Plug 'MikeCoder/markdown-preview.vim'
 Plug 'plasticboy/vim-markdown'
 
-" Code fold
-Plug 'MikeCoder/code-fold.vim'
-
 " QuickRun
 Plug 'MikeCoder/quickrun.vim'
 
