@@ -23,6 +23,8 @@ lnif $CURRENT_DIR/vimrc $HOME/.vimrc
 lnif $CURRENT_DIR/vimrc.bundles $HOME/.vimrc.bundles
 lnif "$CURRENT_DIR/" "$HOME/.vim"
 
+touch "$HOME/.vimrc.private"
+
 
 echo "Step3: update/install plugins using Vundle"
 system_shell=$SHELL

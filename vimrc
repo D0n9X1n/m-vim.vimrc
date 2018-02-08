@@ -26,16 +26,30 @@ let g:mapleader = ','
 " 开启语法高亮
 syntax on
 
+
+"==========================================
+" Add plugins to &runtimepath
+call plug#begin('~/.vim/bundle')
+
 " install bundles
 if filereadable(expand("~/.vimrc.bundles"))
     source ~/.vimrc.bundles
 endif
 
+" private config
+if filereadable(expand("~/.vimrc.bundles"))
+    source ~/.vimrc.private
+endif
 " ensure ftdetect et al work by including this after the bundle stuff
 filetype plugin indent on
 
+" Add plugins to &runtimepath
 "==========================================
+
 " General Settings 基础设置
+call plug#end()
+
+
 "==========================================
 
 " history存储容量

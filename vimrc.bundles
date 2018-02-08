@@ -19,8 +19,6 @@ filetype off " required! turn off
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
 
-call plug#begin('~/.vim/bundle')
-
 " CSS
 Plug 'gko/vim-coloresque'
 
@@ -29,9 +27,6 @@ Plug 'mattn/emmet-vim'
 
 " CodeFormat
 Plug 'Chiel92/vim-autoformat'
-
-" Wakatime 统计, 需要的自己打开
-Plug 'wakatime/vim-wakatime'
 
 " 彩虹括号
 Plug 'luochen1990/rainbow'
@@ -165,9 +160,9 @@ Plug 'majutsushi/tagbar'
 " vimgo
 Plug 'fatih/vim-go', {'for': 'go'}
 
-" Add plugins to &runtimepath
-call plug#end()
-
+" =====================================================
+" =====================================================
+"
 " syntastic {{{
 let g:syntastic_error_symbol = 'x'
 let g:syntastic_warning_symbol = 'x'
