@@ -473,8 +473,7 @@ nnoremap U <C-r>
 "==========================================
 
 " 具体编辑文件类型的一般设置，比如不要 tab 等
-autocmd FileType *.* set tabstop=4 shiftwidth=4 expandtab ai
-autocmd FileType .* set tabstop=4 shiftwidth=4 expandtab ai
+autocmd FileType cpp set ts=2 sw=2 expandtab ai
 
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
 autocmd BufRead,BufNewFile *.part set filetype=html
