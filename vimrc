@@ -237,7 +237,7 @@ set formatoptions+=B
 "==========================================
 " 自动补全配置
 " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-set completeopt=menu,menuone
+set completeopt=menu,menuone,longest
 
 " 增强模式中的命令行自动完成操作
 set wildmenu
@@ -578,3 +578,9 @@ set foldlevel=99
 
 au BufWinLeave *.* silent mkview
 au BufWinEnter *.* silent loadview
+
+set conceallevel=2
+set concealcursor=vin
+let g:clang_snippets=1
+let g:clang_conceal_snippets=1
+let g:clang_snippets_engine='clang_complete'
