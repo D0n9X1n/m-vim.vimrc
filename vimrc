@@ -474,10 +474,12 @@ nnoremap U <C-r>
 
 " 具体编辑文件类型的一般设置，比如不要 tab 等
 autocmd FileType cpp set ts=2 sw=2 expandtab ai
+autocmd FileType c set ts=2 sw=2 expandtab ai
+autocmd FileType javascript set ts=2 sw=2 expandtab ai
+autocmd FileType java set ts=2 sw=2 expandtab ai
 
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
 autocmd BufRead,BufNewFile *.part set filetype=html
-
 
 " 保存python文件时删除多余空格
 fun! <SID>StripTrailingWhitespaces()
@@ -578,8 +580,3 @@ set foldlevel=99
 au BufWinLeave *.* silent mkview
 au BufWinEnter *.* silent loadview
 
-set conceallevel=2
-set concealcursor=vin
-let g:clang_snippets=1
-let g:clang_conceal_snippets=1
-let g:clang_snippets_engine='clang_complete'
