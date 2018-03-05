@@ -37,19 +37,19 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 " private config
-if filereadable(expand("~/.vimrc.bundles"))
+if filereadable(expand("~/.vimrc.private"))
     source ~/.vimrc.private
 endif
 " ensure ftdetect et al work by including this after the bundle stuff
 filetype plugin indent on
 
+call plug#end()
 " Add plugins to &runtimepath
 "==========================================
 
+
+"==========================================
 " General Settings 基础设置
-call plug#end()
-
-
 "==========================================
 
 " history存储容量
