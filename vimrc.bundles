@@ -199,7 +199,6 @@ highlight SyntasticErrorSign guifg=white guibg=black
 let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java', 'md', 'mkd'] }
 " }}}
 
-
 " YouCompleteMe {{{
 " youcompleteme  默认tab  s-tab 和自动补全冲突
 let g:ycm_show_diagnostics_ui = 1
@@ -278,7 +277,6 @@ au BufEnter,BufRead * exec "inoremap <silent> " . g:UltiSnipsJumpBackwordTrigger
 let g:UltiSnipsJumpBackwordTrigger = "<c-k>"
 " }}}
 
-
 " delimitMate {{{
 " for python docstring ",优化输入
 au FileType python let b:delimitMate_nesting_quotes = ['"']
@@ -286,11 +284,9 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 "au FileType mail let b:delimitMate_autoclose = 0
 " }}}
 
-
 " closetag {{{
 let g:closetag_html_style = 1
 " }}}
-
 
 " nerdcommenter {{{
 let g:NERDSpaceDelims = 1
@@ -310,7 +306,6 @@ endif
 let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String'] }
 " }}}
 
-
 " easymotion {{{
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
@@ -322,7 +317,6 @@ map <Leader><leader>l <Plug>(easymotion-lineforward)
 map <Leader><leader>. <Plug>(easymotion-repeat)
 " }}}
 
-
 " quickscope {{{
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:qs_first_occurrence_highlight_color = '#afff5f' " gui vim
@@ -330,7 +324,6 @@ let g:qs_first_occurrence_highlight_color = 155       " terminal vim
 let g:qs_second_occurrence_highlight_color = '#5fffff'  " gui vim
 let g:qs_second_occurrence_highlight_color = 81         " terminal vim
 " }}}
-
 
 " multiplecursors {{{
 let g:multi_cursor_use_default_mapping=0
@@ -370,7 +363,6 @@ let g:ctrlp_funky_syntax_highlight = 1
 
 let g:ctrlp_extensions = ['funky']
 " }}}
-
 
 " ctrlsf {{{
 nmap \ <Plug>CtrlSFCwordPath<CR>
@@ -426,7 +418,6 @@ let g:airline_symbols.notexists = 'ø'
 " let g:airline#extensions#tabline#enabled = 1
 " }}}
 
-
 " colortheme {{{
 let g:solarized_termtrans = 1
 let g:solarized_contrast = "normal"
@@ -460,7 +451,6 @@ let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_open_on_gui_startup=0
 " }}}
 
-" Vim Workspace Controller
 " ctrlspace {{{
 let g:airline_exclude_preview = 1
 hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
@@ -469,8 +459,6 @@ hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE te
 hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
 " }}}
 
-
-" 标签导航
 " tagbar {{{
 nmap <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -521,7 +509,6 @@ let g:tagbar_type_go = {
             \ }
 let g:tagbar_width = 35
 " }}}
-
 
 " pythonsyntax {{{
 let python_highlight_all = 1
