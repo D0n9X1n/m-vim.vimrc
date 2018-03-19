@@ -209,6 +209,16 @@ function! NumberToggle()
     endif
 endfunc
 
+function! SetBGColor()
+    if (&background == 'dark')
+        set background=light
+        " colorscheme solarized
+    else
+        set background=dark
+        " colorscheme gruvbox
+    endif
+endfunc
+
 nnoremap <C-n> :call NumberToggle()<cr>
 
 "==========================================
@@ -280,10 +290,11 @@ nnoremap j gj
 nnoremap gj j
 
 " F1 - F6 设置
-
 " F1 废弃这个键,防止调出系统帮助
 " I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
 nnoremap <F1> <Esc>"
+" F2 背景颜色转变
+nnoremap <F2> :call SetBGColor()<CR>
 " F3 格式化代码
 nnoremap <F3> :Autoformat<CR>
 " F4 换行开关
@@ -532,6 +543,7 @@ endif
 
 " theme主题
 set background=dark
+" set background=light
 
 " colorscheme solarized
 colorscheme gruvbox

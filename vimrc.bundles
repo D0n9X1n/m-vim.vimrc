@@ -396,7 +396,7 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 
 " airline-theme {{{
 " let g:airline_theme = 'base16'
-let g:airline_solarized_bg = 'dark'
+" let g:airline_solarized_bg = 'dark'
 let g:gruvbox_underline = 1
 " }}}
 
