@@ -533,13 +533,6 @@ endif
 "==========================================
 " Theme Settings  主题设置
 "==========================================
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guifont=Consolas-with-Yahei:h13
-    if has("gui_gtk2")   "GTK2
-        set guifont=Consolas-with-Yahei:h13
-    endif
-endif
 
 " theme主题
 set background=dark
@@ -550,6 +543,16 @@ colorscheme gruvbox
 " colorscheme molokai
 " colorscheme desert
 " colorscheme iceberg
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guifont=Consolas-with-Yahei:h14.5
+    colorscheme solarized
+    if has("gui_gtk2")   "GTK2
+        set guifont=Consolas-with-Yahei:h14.5
+        colorscheme solarized
+    endif
+endif
 
 " 设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
