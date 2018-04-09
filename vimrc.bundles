@@ -593,7 +593,6 @@ let g:cssColorVimDoNotMessMyUpdatetime = 5
 " }}}
 
 " vim-autoformat {{{
-let g:formatter_yapf_style = 'pep8'
 let g:autoformat_verbosemode = 0
 " }}}
 
