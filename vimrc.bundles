@@ -19,6 +19,9 @@ filetype off " required! turn off
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
 
+" solidity
+Plug 'tomlion/vim-solidity'
+
 " CSS
 Plug 'gko/vim-coloresque'
 
