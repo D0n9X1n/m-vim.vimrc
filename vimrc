@@ -465,8 +465,8 @@ nnoremap <C-y> 2<C-y>
 " Quickly close the current buffer
 nnoremap <leader>q :bdelete<CR>
 
-" Quickly save the current file
-nnoremap <leader>w :w<CR>
+" Force save
+nnoremap <leader>w :w !sudo tee >/dev/null %
 
 " 交换 ' `, 使得可以快速使用'跳到marked位置
 nnoremap ' `
