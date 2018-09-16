@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 view/
 bundle/
 MarkDownRes/
@@ -4057,3 +4058,5 @@ cscope.po.out
 # Project-level settings
 /.tgitconfig
 
+bundle
+view
