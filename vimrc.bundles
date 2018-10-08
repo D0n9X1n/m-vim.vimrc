@@ -24,6 +24,7 @@ Plug 'tomlion/vim-solidity'
 
 " CSS
 Plug 'gko/vim-coloresque'
+Plug 'lilydjwg/colorizer'
 
 " HTML
 Plug 'mattn/emmet-vim'
@@ -145,10 +146,6 @@ Plug 'vim-airline/vim-airline-themes'
 " ColorTheme
 Plug 'altercation/vim-colors-solarized'
 Plug 'MVIM/gruvbox'
-Plug 'ashfinal/vim-colors-violet'
-Plug 'ayu-theme/ayu-vim'
-Plug 'jdkanani/vim-material-theme'
-Plug 'cocopon/iceberg.vim'
 
 " nav
 " nerdtree nerdtreetabs
