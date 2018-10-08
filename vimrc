@@ -301,6 +301,8 @@ nnoremap <F7> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 nnoremap <F8> : IndentLinesToggle <CR>
 " F12 查看修改部分 (GIT)
 nnoremap <F12> : GitGutterToggle<CR>
+" F10 取消行号
+nnoremap <F10> : set number! number? <CR>
 
 " leave insert nopaste mode
 au InsertLeave * set nopaste
