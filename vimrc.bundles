@@ -87,6 +87,9 @@ Plug 'bronson/vim-trailing-whitespace'
 " 快速赋值语句对齐
 Plug 'junegunn/vim-easy-align'
 
+" 快速多文件搜索
+Plug 'dkprice/vim-easygrep'
+
 " quick movement
 " easymotion
 "更高效的移动 [,, + w/fx/h/j/k/l]
@@ -346,10 +349,10 @@ let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 " " 如果安装了ag, 使用ag
 if executable('ag')
-" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-" ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
 endif
 
 " ctrlpfunky
@@ -567,8 +570,8 @@ let g:vim_markdown_frontmatter = 1
 
 " quickrun.vim {{{
 let g:quickrun_known_file_types = {
-            \"cpp": ["!g++ -g -std=c++11 \"%\"", "./a.out"],
-            \"c": ["!gcc -g \"%\"", "./a.out"],
+            \"cpp": ["!clang++ -g -std=c++11 \"%\"", "./a.out"],
+            \"c": ["!clang -g \"%\"", "./a.out"],
             \"php": ["!php \"%\""],
             \"vim": ["source \"%\""],
             \"py": ["!python \"%\""],
@@ -595,5 +598,13 @@ let g:autoformat_verbosemode = 0
 " gruvbox {{{
 " let g:gruvbox_improved_warnings = 1
 let g:gruvbox_sign_column = 'bg0'
+" }}}
+
+" vim-easygrep {{{
+let g:EasyGrepMode = 2
+let g:EasyGrepCommand = 1
+let g:EasyGrepPerlStyle = 1
+let g:EasyGrepRecursive = 1
+let g:EasyGrepIgnoreCase = 0
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
