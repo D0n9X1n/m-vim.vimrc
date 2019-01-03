@@ -36,7 +36,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'luochen1990/rainbow'
 
 " minibufferexpl
-Plug 'fholgado/minibufexpl.vim'
+" Plug 'fholgado/minibufexpl.vim'
 
 " Go 加强
 " Plug 'dgryski/vim-godef'
@@ -394,8 +394,9 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 " }}}
 
 " airline-theme {{{
-let g:airline_theme = 'angr'
-" let g:airline_solarized_bg = 'dark'
+" let g:airline_theme = 'solarized'
+let g:airline_theme = 'base16'
+let g:airline_solarized_bg = 'dark'
 let g:gruvbox_underline = 1
 " }}}
 
@@ -414,7 +415,7 @@ let g:airline_right_alt_sep = '❮'
 let g:airline_symbols.notexists = ' +'
 
 " 是否打开tabline
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " colortheme {{{
