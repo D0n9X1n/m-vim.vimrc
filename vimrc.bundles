@@ -38,10 +38,6 @@ Plug 'luochen1990/rainbow'
 " minibufferexpl
 " Plug 'fholgado/minibufexpl.vim'
 
-" Go 加强
-" Plug 'dgryski/vim-godef'
-" Plug 'Blackrush/vim-gocode'
-
 " 全文搜索
 Plug 'rking/ag.vim'
 
@@ -148,7 +144,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " ColorTheme
 Plug 'altercation/vim-colors-solarized'
-Plug 'MVIM/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " nav
 " nerdtree nerdtreetabs
@@ -162,6 +158,10 @@ Plug 'majutsushi/tagbar'
 " 2. :GoInstallBinaries
 " vimgo
 " Plug 'fatih/vim-go', {'for': 'go'}
+
+" Go 加强
+" Plug 'dgryski/vim-godef'
+" Plug 'Blackrush/vim-gocode'
 
 " =====================================================
 " =====================================================
