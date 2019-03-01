@@ -157,11 +157,11 @@ Plug 'majutsushi/tagbar'
 " 1. vim a.go
 " 2. :GoInstallBinaries
 " vimgo
-" Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'fatih/vim-go', {'for': 'go'}
 
 " Go 加强
-" Plug 'dgryski/vim-godef'
-" Plug 'Blackrush/vim-gocode'
+Plug 'dgryski/vim-godef'
+Plug 'Blackrush/vim-gocode'
 
 " =====================================================
 " =====================================================
