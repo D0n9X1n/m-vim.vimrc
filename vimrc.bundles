@@ -51,9 +51,6 @@ Plug 'MikeCoder/quickrun.vim'
 " 显示线
 Plug 'Yggdroot/indentLine'
 
-" syntastic
-Plug 'scrooloose/syntastic'
-
 " Group dependencies, vim-snippets depends on ultisnips
 " 代码片段快速插入 (snippets中,是代码片段资源,需要学习)
 " Snippets are separated from the engine. Add this if you want them:
@@ -165,43 +162,6 @@ Plug 'Blackrush/vim-gocode'
 
 " =====================================================
 " =====================================================
-"
-" syntastic {{{
-let g:syntastic_error_symbol = 'x'
-let g:syntastic_warning_symbol = 'x'
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs = 0
-let g:syntastic_enable_highlighting = 1
-
-" checkers
-" 最轻量
-let g:syntastic_python_checkers=['pyflakes'] " 使用pyflakes
-
-" if js
-let g:syntastic_javascript_checkers = ['jsl', 'jshint']
-let g:syntastic_html_checkers=['tidy', 'jshint']
-
-" to see error location list
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_loc_list_height = 5
-
-function! ToggleErrors()
-    let old_last_winnr = winnr('$')
-    lclose
-    if old_last_winnr == winnr('$')
-        Errors
-    endif
-endfunction
-
-" 修改高亮的背景色, 适应主题
-highlight SyntasticErrorSign guifg=white guibg=black
-
-" thanks to @marsqing, see https://github.com/wklken/k-vim/issues/164
-let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java', 'md', 'mkd'] }
-" }}}
-
 " YouCompleteMe {{{
 " youcompleteme  默认tab  s-tab 和自动补全冲突
 let g:ycm_show_diagnostics_ui = 1
@@ -212,9 +172,11 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_complete_in_comments = 0  "在注释输入中也能补全
 let g:ycm_complete_in_strings = 0   "在字符串输入中也能补全
 let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
-let g:ycm_collect_identifiers_from_comments_and_strings = 0   "注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_max_num_candidates = 5
+let g:ycm_max_num_candidates = 2
+let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_min_num_identifier_candidate_chars = 2
 " 开启语法关键字补全
 let g:ycm_seed_identifiers_with_syntax = 1
 " 回车作为选中
@@ -228,18 +190,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>ee :YcmDiags<CR>
 
-" 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
-" old version
-" if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-" let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
-" endif
-" " new version
-" if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-" let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-" endif
-
-let g:ycm_global_ycm_extra_conf = "~/.vim/ycmconfig.py"
-
 " 直接触发自动补全 insert模式下
 " let g:ycm_key_invoke_completion = '<C-Space>'
 " 黑名单,不启用
@@ -248,6 +198,24 @@ let g:ycm_filetype_blacklist = {
             \ 'gitcommit' : 1,
             \}
 " }}}
+
+let g:ycm_semantic_triggers =  {
+            \ "c,cpp,python,java,go,erlang,perl": ['re!\w{2}'],
+            \ "cs,lua,javascript": ['re!\w{2}'],
+            \ }
+
+let g:ycm_filetype_whitelist = {
+            \ "c":1,
+            \ "cpp":1,
+            \ "sh":1,
+            \ "zsh":1,
+            \ "py":1,
+            \ "js":1,
+            \ "php":1,
+            \ "md":1,
+            \ }
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
 " ultisnips {{{
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -526,15 +494,8 @@ let g:go_fmt_fail_silently = 1
 " let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 " }}}
 
-" markdown {{{
-let g:vim_markdown_folding_disabled = 0
-let g:vim_markdown_conceal = 0
-let g:markdown_enable_spell_checking = 1
-let g:vim_markdown_new_list_item_indent = 4
-" }}}
-
 " ag.vim {{{
-map <leader>s :Ag
+map <leader>s :Ag 
 " }}}
 
 " indentLine.vim {{{
@@ -563,10 +524,6 @@ let g:rainbow_conf = {
 " markdown-preview.vim {{{
 map <leader>m :MarkdownPreview github<CR>
 " let g:PluginDir = '/Users/Mike/Workspace/vim-code/markdown-preview.vim'
-" }}}
-
-" markdown.vim {{{
-let g:vim_markdown_frontmatter = 1
 " }}}
 
 " quickrun.vim {{{
