@@ -190,20 +190,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>ee :YcmDiags<CR>
 
-" 直接触发自动补全 insert模式下
-" let g:ycm_key_invoke_completion = '<C-Space>'
-" 黑名单,不启用
-let g:ycm_filetype_blacklist = {
-            \ 'tagbar' : 1,
-            \ 'gitcommit' : 1,
-            \}
-" }}}
-
-let g:ycm_semantic_triggers =  {
-            \ "c,cpp,python,java,go,erlang,perl": ['re!\w{2}'],
-            \ "cs,lua,javascript": ['re!\w{2}'],
-            \ }
-
 let g:ycm_filetype_whitelist = {
             \ "c":1,
             \ "cpp":1,
