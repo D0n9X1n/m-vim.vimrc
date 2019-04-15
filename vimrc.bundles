@@ -190,17 +190,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>ee :YcmDiags<CR>
 
-let g:ycm_filetype_whitelist = {
-            \ "c":1,
-            \ "cpp":1,
-            \ "sh":1,
-            \ "zsh":1,
-            \ "py":1,
-            \ "js":1,
-            \ "php":1,
-            \ "md":1,
-            \ }
-
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
 " ultisnips {{{
