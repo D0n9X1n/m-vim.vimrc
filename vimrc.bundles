@@ -151,15 +151,6 @@ Plug 'szw/vim-ctrlspace'
 " tagbar
 Plug 'majutsushi/tagbar'
 
-" 1. vim a.go
-" 2. :GoInstallBinaries
-" vimgo
-Plug 'fatih/vim-go', {'for': 'go'}
-
-" Go 加强
-Plug 'dgryski/vim-godef'
-Plug 'Blackrush/vim-gocode'
-
 " =====================================================
 " =====================================================
 " YouCompleteMe {{{
@@ -419,54 +410,11 @@ let g:tagbar_type_ruby = {
             \ ]
             \ }
 
-" go语言的tagbar配置
-" 1. install gotags 'go get -u github.com/jstemmer/gotags'
-" 2. make sure `gotags` in you shell PATH, you can call check it with `which gotags`
-" for gotags. work with tagbar
-let g:tagbar_type_go = {
-            \ 'ctagstype' : 'go',
-            \ 'kinds'     : [
-            \ 'p:package',
-            \ 'i:imports:1',
-            \ 'c:constants',
-            \ 'v:variables',
-            \ 't:types',
-            \ 'n:interfaces',
-            \ 'w:fields',
-            \ 'e:embedded',
-            \ 'm:methods',
-            \ 'r:constructor',
-            \ 'f:functions'
-            \ ],
-            \ 'sro' : '.',
-            \ 'kind2scope' : {
-            \ 't' : 'ctype',
-            \ 'n' : 'ntype'
-            \ },
-            \ 'scope2kind' : {
-            \ 'ctype' : 't',
-            \ 'ntype' : 'n'
-            \ },
-            \ 'ctagsbin'  : 'gotags',
-            \ 'ctagsargs' : '-sort -silent'
-            \ }
 let g:tagbar_width = 35
 " }}}
 
 " pythonsyntax {{{
 let python_highlight_all = 1
-" }}}
-
-" vimgo {{{
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-
-let g:go_fmt_fail_silently = 1
-" let g:go_fmt_command = "goimports"
-" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 " }}}
 
 " ag.vim {{{
@@ -489,7 +437,7 @@ let g:miniBufExplCycleArround = 1
 " }}}
 
 " rainbow {{{
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
+let g:rainbow_active = 0 "0 if you want to enable it later via :RainbowToggle"
 let g:rainbow_conf = {
             \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
             \   'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta', 'darkgreen', 'darkred', 'red', 'brown']
@@ -508,7 +456,6 @@ let g:quickrun_known_file_types = {
             \"php": ["!php \"%\""],
             \"vim": ["source \"%\""],
             \"py": ["!python \"%\""],
-            \"go": ["!go run \"%\""],
             \"git": ["!git add.", "git commit -am '%'", "git push origin master"],
             \"md": ["MarkdownPreview github"],
             \"html": ["!open \"%\""],
@@ -525,11 +472,11 @@ let g:cssColorVimDoNotMessMyUpdatetime = 5
 " }}}
 
 " vim-autoformat {{{
-let g:autoformat_verbosemode = 0
+let g:autoformat_verbosemode = 1
 " }}}
 
 " gruvbox {{{
-" let g:gruvbox_improved_warnings = 1
+let g:gruvbox_improved_warnings = 1
 let g:gruvbox_sign_column = 'bg0'
 " }}}
 
