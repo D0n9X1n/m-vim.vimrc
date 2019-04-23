@@ -19,6 +19,9 @@ filetype off " required! turn off
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
 
+" Rust Lang
+Plug 'rust-lang/rust.vim'
+
 " solidity
 Plug 'tomlion/vim-solidity'
 
@@ -486,5 +489,8 @@ let g:EasyGrepCommand = 1
 let g:EasyGrepPerlStyle = 1
 let g:EasyGrepRecursive = 1
 let g:EasyGrepIgnoreCase = 0
+
+" rust-vim {{{
+let g:rustfmt_autosave = 1
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
