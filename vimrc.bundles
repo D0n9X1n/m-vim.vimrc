@@ -18,6 +18,8 @@ filetype off " required! turn off
 " 使用 vim-plug 管理插件
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
+" JS formatter
+Plug 'editorconfig/editorconfig-vim'
 
 " Rust Lang
 Plug 'rust-lang/rust.vim'
@@ -39,7 +41,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'luochen1990/rainbow'
 
 " minibufferexpl
-Plug 'fholgado/minibufexpl.vim'
+" Plug 'fholgado/minibufexpl.vim'
 
 " 全文搜索
 Plug 'rking/ag.vim'
@@ -332,7 +334,7 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 
 " airline-theme {{{
 " let g:airline_theme = 'solarized'
-let g:airline_theme = 'base16'
+let g:airline_theme = 'gruvbox'
 let g:airline_solarized_bg = 'dark'
 let g:gruvbox_underline = 1
 " }}}
@@ -352,7 +354,7 @@ let g:airline_right_alt_sep = '❮'
 let g:airline_symbols.notexists = ' +'
 
 " 是否打开tabline
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " colortheme {{{
