@@ -21,6 +21,9 @@ filetype off " required! turn off
 " JS formatter
 Plug 'editorconfig/editorconfig-vim'
 
+" color theme
+Plug 'ashfinal/vim-colors-violet'
+
 " Rust Lang
 Plug 'rust-lang/rust.vim'
 
@@ -334,7 +337,8 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 
 " airline-theme {{{
 " let g:airline_theme = 'solarized'
-let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'violet'
 let g:airline_solarized_bg = 'dark'
 let g:gruvbox_underline = 1
 " }}}
