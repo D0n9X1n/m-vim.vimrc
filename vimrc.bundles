@@ -18,6 +18,15 @@ filetype off " required! turn off
 " 使用 vim-plug 管理插件
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
+
+" Typescript
+" provides syntax files for highlighting .ts and .d.ts files.
+Plug 'leafgarland/typescript-vim'
+" provides more syntax highlighting and DOM keywords.
+Plug 'HerringtonDarkholme/yats.vim'
+" Auto completion
+Plug 'Quramy/tsuquyomi'
+
 " JS formatter
 Plug 'editorconfig/editorconfig-vim'
 
@@ -430,7 +439,7 @@ let python_highlight_all = 1
 " }}}
 
 " ag.vim {{{
-map <leader>s :Ag 
+map <leader>s :Ag
 " }}}
 
 " indentLine.vim {{{
@@ -509,5 +518,12 @@ let g:EasyGrepIgnoreCase = 0
 
 " rust-vim {{{
 let g:rustfmt_autosave = 1
+" }}}
+
+" Quramy/tsuquyomi {{{
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
