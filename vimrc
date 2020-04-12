@@ -532,10 +532,9 @@ endif
 set background=dark
 " set background=light
 
-colorscheme solarized
+" colorscheme solarized
 " colorscheme violet
-" colorscheme gruvbox
-" colorscheme molokai
+colorscheme gruvbox
 " colorscheme desert
 " colorscheme iceberg
 
