@@ -47,10 +47,15 @@ call plug#end()
 " Add plugins to &runtimepath
 "==========================================
 
-
 "==========================================
 " General Settings 基础设置
 "==========================================
+
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+inoremap < <><ESC>i
+inoremap " ""<ESC>i
 
 " history存储容量
 set history=1000
