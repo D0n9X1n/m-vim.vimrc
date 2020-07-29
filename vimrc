@@ -54,7 +54,7 @@ call plug#end()
 " 自动补全
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap { {}<Esc>O
+inoremap { {}<Esc>i
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
 inoremap } <c-r>=ClosePair('}')<CR>
