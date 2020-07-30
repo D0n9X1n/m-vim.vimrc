@@ -80,6 +80,8 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe'
 " 自动补全html/xml标签
 Plug 'docunext/closetag.vim'
+" 补全引号相关
+Plug 'Raimondi/delimitMate'
 
 " quick edit
 " 快速注释
