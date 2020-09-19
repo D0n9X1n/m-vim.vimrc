@@ -322,7 +322,7 @@ nnoremap <F2> :call SetBGColor()<CR>
 nnoremap <leader>b :call SetBGColor()<CR>
 " F3 格式化代码
 nnoremap <F3> :Autoformat<CR>
-nnoremap <leader>e :Autoformat<CR>
+nnoremap <leader>af :Autoformat<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 nnoremap <leader>wr :set wrap! wrap?<CR>
@@ -331,7 +331,7 @@ nnoremap <F5> :QuickRun<cr>
 nnoremap <leader>run :QuickRun<cr>
 " F6 开关相对行号
 nnoremap <F6> :call NumberToggle()<cr>
-nnoremap <leader>rn :call NumberToggle()<cr>
+nnoremap <leader>rln :call NumberToggle()<cr>
 " F7 语法开关，关闭语法可以加快大文件的展示
 nnoremap <F7> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 nnoremap <leader>syn :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
