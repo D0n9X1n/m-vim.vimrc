@@ -319,26 +319,31 @@ nnoremap gj j
 nnoremap <F1> <Esc>"
 " F2 背景颜色转变
 nnoremap <F2> :call SetBGColor()<CR>
+nnoremap <leader>b :call SetBGColor()<CR>
 " F3 格式化代码
 nnoremap <F3> :Autoformat<CR>
+nnoremap <leader>e :Autoformat<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
+nnoremap <leader>wr :set wrap! wrap?<CR>
 " F5 快速运行
 nnoremap <F5> :QuickRun<cr>
-nnoremap <leader>r :QuickRun<cr>
+nnoremap <leader>run :QuickRun<cr>
 " F6 开关相对行号
 nnoremap <F6> :call NumberToggle()<cr>
-nnoremap <leader>n :call NumberToggle()<cr>
+nnoremap <leader>rn :call NumberToggle()<cr>
 " F7 语法开关，关闭语法可以加快大文件的展示
 nnoremap <F7> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
-nnoremap <leader>h :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+nnoremap <leader>syn :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 " F8 定位线开关，可以加快大文件显示速度
 nnoremap <F8> : IndentLinesToggle <CR>
-nnoremap <leader>l : IndentLinesToggle <CR>
+nnoremap <leader>il : IndentLinesToggle <CR>
 " F12 查看修改部分 (GIT)
 nnoremap <F12> : GitGutterToggle<CR>
+nnoremap <leader>git : GitGutterToggle<CR>
 " F10 取消行号
 nnoremap <F10> : set number! number? <CR>
+nnoremap <leader>ln : set number! number? <CR>
 
 " leave insert nopaste mode
 au InsertLeave * set nopaste
