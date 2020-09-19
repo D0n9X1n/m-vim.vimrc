@@ -325,12 +325,16 @@ nnoremap <F3> :Autoformat<CR>
 nnoremap <F4> :set wrap! wrap?<CR>
 " F5 快速运行
 nnoremap <F5> :QuickRun<cr>
+nnoremap <leader>r :QuickRun<cr>
 " F6 开关相对行号
 nnoremap <F6> :call NumberToggle()<cr>
+nnoremap <leader>n :call NumberToggle()<cr>
 " F7 语法开关，关闭语法可以加快大文件的展示
 nnoremap <F7> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+nnoremap <leader>h :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 " F8 定位线开关，可以加快大文件显示速度
 nnoremap <F8> : IndentLinesToggle <CR>
+nnoremap <leader>l : IndentLinesToggle <CR>
 " F12 查看修改部分 (GIT)
 nnoremap <F12> : GitGutterToggle<CR>
 " F10 取消行号
