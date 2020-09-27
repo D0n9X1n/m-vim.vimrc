@@ -26,24 +26,4 @@ lnif "$CURRENT_DIR/" "$HOME/.vim"
 touch "$HOME/.vimrc.private"
 
 
-echo "Step3: update/install plugins using Vundle"
-system_shell=$SHELL
-export SHELL="/bin/sh"
-vim -u $HOME/.vimrc.bundles +PlugInstall! +PlugClean! +qall
-export SHELL=$system_shell
-
-
-echo "Step4: compile YouCompleteMe"
-echo "It will take a long time, just be patient!"
-echo "If error,you need to compile it yourself"
-echo "cd $CURRENT_DIR/bundle/YouCompleteMe/ && bash -x install.sh --clang-completer"
-cd $CURRENT_DIR/bundle/YouCompleteMe/
-git submodule update --init --recursive
-if [ `which clang` ]   # check system clang
-then
-    bash -x install.sh --clang-completer --system-libclang   # use system clang
-else
-    bash -x install.sh --clang-completer
-fi
-
-echo "Install Done!"
+echo "Install Done! open your vim and run :PlugInstall !"
