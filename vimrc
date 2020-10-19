@@ -317,16 +317,18 @@ nnoremap gj j
 " F1 废弃这个键,防止调出系统帮助
 " I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
 nnoremap <F1> <Esc>"
-" F2 背景颜色转变
-nnoremap <F2> :call SetBGColor()<CR>
+" 调整背景颜色
+" nnoremap <F2> :call SetBGColor()<CR>
 nnoremap <leader>b :call SetBGColor()<CR>
-" F3 格式化代码
+" F2, F3 格式化代码
+nnoremap <F2> :Autoformat<CR>
 nnoremap <F3> :Autoformat<CR>
 nnoremap <leader>af :Autoformat<CR>
-" F4 换行开关
-nnoremap <F4> :set wrap! wrap?<CR>
+" 换行开关
+" nnoremap <F4> :set wrap! wrap?<CR>
 nnoremap <leader>wr :set wrap! wrap?<CR>
-" F5 快速运行
+" F4, F5 快速运行
+nnoremap <F4> :QuickRun<cr>
 nnoremap <F5> :QuickRun<cr>
 nnoremap <leader>run :QuickRun<cr>
 " F6 开关相对行号
