@@ -53,7 +53,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'luochen1990/rainbow'
 
 " minibufferexpl
-Plug 'fholgado/minibufexpl.vim'
+" Plug 'fholgado/minibufexpl.vim'
 
 " 全文搜索
 Plug 'rking/ag.vim'
@@ -361,7 +361,7 @@ let g:airline_right_alt_sep = '❮'
 let g:airline_symbols.notexists = ' +'
 
 " 是否打开tabline
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#buffer_nr_show = 1
 " let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " }}}
@@ -441,22 +441,22 @@ let g:indentLine_enabled = 0
 " }}}
 
 " minibufexpl {{{
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-" 解决FileExplorer窗口变小问题
-let g:miniBufExplForceSyntaxEnable = 1
-let g:miniBufExplorerMoreThanOne = 1
-let g:miniBufExplCycleArround = 1
+" let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplMapWindowNavArrows = 1
+" let g:miniBufExplMapCTabSwitchBufs = 1
+" let g:miniBufExplModSelTarget = 1
+" " 解决FileExplorer窗口变小问题
+" let g:miniBufExplForceSyntaxEnable = 1
+" let g:miniBufExplorerMoreThanOne = 1
+" let g:miniBufExplCycleArround = 1
 
-" minibufexpl colors
-hi MBENormal               guifg=#808080 guibg=fg
-hi MBEChanged              guifg=#CD5907 guibg=fg
-hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
-hi MBEVisibleChanged       guifg=#F1266F guibg=fg
-hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
-hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
+" " minibufexpl colors
+" hi MBENormal               guifg=#808080 guibg=fg
+" hi MBEChanged              guifg=#CD5907 guibg=fg
+" hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
+" hi MBEVisibleChanged       guifg=#F1266F guibg=fg
+" hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
+" hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 " }}}
 
 " rainbow {{{
