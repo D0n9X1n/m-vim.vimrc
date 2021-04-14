@@ -36,6 +36,9 @@ Plug 'ashfinal/vim-colors-violet'
 " Rust Lang
 Plug 'rust-lang/rust.vim'
 
+" Swift lang
+Plug 'keith/swift.vim'
+
 " solidity
 Plug 'tomlion/vim-solidity'
 
@@ -514,6 +517,10 @@ let g:EasyGrepIgnoreCase = 0
 
 " rust-vim {{{
 let g:rustfmt_autosave = 1
+" }}}
+
+" swift-vim {{{
+let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 " }}}
 
 " Quramy/tsuquyomi {{{
