@@ -19,13 +19,13 @@ filetype off " required! turn off
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
 
-" Typescript
-" provides syntax files for highlighting .ts and .d.ts files.
-Plug 'leafgarland/typescript-vim'
-" provides more syntax highlighting and DOM keywords.
-Plug 'HerringtonDarkholme/yats.vim'
-" Auto completion
-Plug 'Quramy/tsuquyomi'
+" " Typescript
+" " provides syntax files for highlighting .ts and .d.ts files.
+" Plug 'leafgarland/typescript-vim'
+" " provides more syntax highlighting and DOM keywords.
+" Plug 'HerringtonDarkholme/yats.vim'
+" " Auto completion
+" Plug 'Quramy/tsuquyomi'
 
 " JS formatter
 Plug 'editorconfig/editorconfig-vim'
@@ -34,10 +34,10 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ashfinal/vim-colors-violet'
 
 " Rust Lang
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 
 " Swift lang
-Plug 'keith/swift.vim'
+" Plug 'keith/swift.vim'
 
 " solidity
 Plug 'tomlion/vim-solidity'
@@ -80,7 +80,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " 代码自动补全
 " 迄今为止用到的最好的自动VIM自动补全插件
 " 重启 :YcmRestartServer
-Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 " 自动补全html/xml标签
 Plug 'docunext/closetag.vim'
 " 补全引号相关
@@ -180,8 +180,8 @@ let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 1
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
-let g:ycm_complete_in_comments = 0  "在注释输入中也能补全
-let g:ycm_complete_in_strings = 0   "在字符串输入中也能补全
+let g:ycm_complete_in_comments = 1 "在注释输入中也能补全
+let g:ycm_complete_in_strings = 1 "在字符串输入中也能补全
 let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
@@ -192,6 +192,9 @@ let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_seed_identifiers_with_syntax = 1
 " 回车作为选中
 let g:ycm_key_list_stop_completion=['<CR>']
+" Fix bug on MacOS based on: https://github.com/ycm-core/YouCompleteMe/issues/3877
+let g:ycm_use_clangd = 1
+let g:ycm_clangd_binary_path='clangd'
 
 " 跳转到定义处, 分屏打开
 let g:ycm_goto_buffer_command='horizontal-split'
@@ -201,7 +204,7 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>ee :YcmDiags<CR>
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
 " ultisnips {{{
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -516,17 +519,17 @@ let g:EasyGrepRecursive = 1
 let g:EasyGrepIgnoreCase = 0
 
 " rust-vim {{{
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
 " }}}
 
 " swift-vim {{{
-let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
+" let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 " }}}
 
 " Quramy/tsuquyomi {{{
-if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
+" if !exists("g:ycm_semantic_triggers")
+  " let g:ycm_semantic_triggers = {}
+" endif
+" let g:ycm_semantic_triggers['typescript'] = ['.']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
