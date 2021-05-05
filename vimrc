@@ -576,8 +576,8 @@ set background=dark
 " set background=light
 
 " colorscheme solarized
-colorscheme violet
-" colorscheme gruvbox
+" colorscheme violet
+colorscheme gruvbox
 " colorscheme desert
 " colorscheme iceberg
 

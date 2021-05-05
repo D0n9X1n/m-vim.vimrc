@@ -32,6 +32,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 " color theme
 Plug 'ashfinal/vim-colors-violet'
+Plug 'MOSconfig/gruvbox'
 
 " Rust Lang
 " Plug 'rust-lang/rust.vim'
@@ -161,7 +162,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " ColorTheme
 Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
+Plug 'MOSconfig/gruvbox'
 
 " nav
 " nerdtree nerdtreetabs
