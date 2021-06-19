@@ -482,6 +482,7 @@ map <leader>m :MarkdownPreview github<CR>
 " quickrun.vim {{{
 let g:quickrun_known_file_types = {
             \"cpp": ["!clang++ -g -std=c++11 \"%\"", "./a.out"],
+            \"cc": ["!clang++ -g -std=c++11 \"%\"", "./a.out"],
             \"c": ["!clang -g \"%\"", "./a.out"],
             \"php": ["!php \"%\""],
             \"vim": ["source \"%\""],
