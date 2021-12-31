@@ -33,12 +33,7 @@ Plug 'editorconfig/editorconfig-vim'
 " color theme
 Plug 'ashfinal/vim-colors-violet'
 Plug 'MOSconfig/gruvbox'
-
-" Rust Lang
-" Plug 'rust-lang/rust.vim'
-
-" Swift lang
-" Plug 'keith/swift.vim'
+Plug 'altercation/vim-colors-solarized'
 
 " solidity
 Plug 'tomlion/vim-solidity'
@@ -46,6 +41,7 @@ Plug 'tomlion/vim-solidity'
 " CSS
 Plug 'gko/vim-coloresque'
 Plug 'lilydjwg/colorizer'
+Plug 'ap/vim-css-color'
 
 " HTML
 Plug 'mattn/emmet-vim'
@@ -57,7 +53,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'luochen1990/rainbow'
 
 " minibufferexpl
-" Plug 'fholgado/minibufexpl.vim'
+Plug 'fholgado/minibufexpl.vim'
 
 " 全文搜索
 Plug 'rking/ag.vim'
@@ -159,10 +155,6 @@ Plug 'sjl/gundo.vim'
 " 状态栏增强展示
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" ColorTheme
-Plug 'altercation/vim-colors-solarized'
-Plug 'MOSconfig/gruvbox'
 
 " nav
 " nerdtree nerdtreetabs
@@ -346,9 +338,9 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 
 " airline-theme {{{
 " let g:airline_theme = 'solarized'
-" let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'gruvbox'
 " let g:airline_theme = 'violet'
-let g:airline_theme = 'base16'
+" let g:airline_theme = 'base16'
 let g:airline_solarized_bg = 'dark'
 let g:gruvbox_underline = 1
 " }}}
@@ -372,16 +364,9 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.notexists = '∄'
 
 " 是否打开tabline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-" }}}
-
-" colortheme {{{
-let g:solarized_termtrans = 1
-let g:solarized_contrast = "normal"
-let g:solarized_visibility = "normal"
-let g:solarized_termcolors = 16
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#buffer_nr_show = 1
+" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " }}}
 
 " nerdtree nerdtreetabs {{{
@@ -462,7 +447,7 @@ let g:miniBufExplorerMoreThanOne = 1
 let g:miniBufExplCycleArround = 1
 
 " minibufexpl colors
-hi MBENormal               guifg=#808080 guibg=fg
+hi MBENormal               guifg=#208080 guibg=fg
 hi MBEChanged              guifg=#CD5907 guibg=fg
 hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
 hi MBEVisibleChanged       guifg=#F1266F guibg=fg
@@ -500,10 +485,6 @@ let g:quickrun_known_file_types = {
 " emmet-vim {{{
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-" }}}
-
-" vim-css-color {{{
-let g:cssColorVimDoNotMessMyUpdatetime = 5
 " }}}
 
 " vim-autoformat {{{
