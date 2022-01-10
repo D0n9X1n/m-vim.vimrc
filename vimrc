@@ -573,13 +573,17 @@ endif
 
 " theme主题
 set background=dark
-" set background=light
 
-" colorscheme solarized
-" colorscheme violet
-colorscheme gruvbox
-" colorscheme desert
-" colorscheme iceberg
+" Set contrast.
+" This configuration option should be placed before `colorscheme everforest`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:everforest_background = 'hard'
+colorscheme everforest
+
+" Important!!
+if has('termguicolors')
+    set termguicolors
+endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
