@@ -579,7 +579,9 @@ set background=dark
 " Available values: 'hard', 'medium'(default), 'soft'
 " let g:everforest_background = 'hard'
 " colorscheme solarized
-colorscheme everforest
+" colorscheme everforest
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 
 " Important!!
 if has('termguicolors')
