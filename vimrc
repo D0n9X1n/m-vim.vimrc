@@ -577,7 +577,8 @@ set background=dark
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:everforest_background = 'hard'
+" let g:everforest_background = 'hard'
+" colorscheme solarized
 colorscheme everforest
 
 " Important!!
@@ -587,10 +588,10 @@ endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Consolas-with-Yahei:h14.5
+    set guifont="FiraCode Nerd Font":h14.5
     colorscheme solarized
     if has("gui_gtk2")   "GTK2
-        set guifont=Consolas-with-Yahei:h14.5
+        set guifont="FiraCode Nerd Font":h14.5
         colorscheme solarized
     endif
 endif
@@ -638,4 +639,4 @@ au BufWinEnter *.* silent loadview
 
 
 " Quick git push for OJ Game
-map <leader>g :!git add . && git commit -am "%" && git push origin master<CR>
+map <leader>g :!git add . && git commit -am "%" && git pull origin master && git push origin master<CR>
