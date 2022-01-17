@@ -571,30 +571,34 @@ endif
 " Theme Settings  主题设置
 "==========================================
 
+" Important!!
+if has('termguicolors')
+    set termguicolors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 " theme主题
 set background=dark
 
+" high, low, flat, none
+colorscheme solarized8_flat
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
 " let g:everforest_background = 'hard'
-" colorscheme solarized
 " colorscheme everforest
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
-
-" Important!!
-if has('termguicolors')
-    set termguicolors
-endif
+" colorscheme solarized
+" let g:gruvbox_contrast_dark='hard'
+" colorscheme gruvbox
 
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guifont="FiraCode Nerd Font":h14.5
-    colorscheme solarized
+    colorscheme solarized8_flat
     if has("gui_gtk2")   "GTK2
         set guifont="FiraCode Nerd Font":h14.5
-        colorscheme solarized
+        colorscheme solarized8_flat
     endif
 endif
 

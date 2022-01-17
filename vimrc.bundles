@@ -36,6 +36,7 @@ Plug 'altercation/solarized'
 Plug 'altercation/vim-colors-solarized'
 Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
+Plug 'lifepillar/vim-solarized8'
 
 " solidity
 Plug 'tomlion/vim-solidity'
