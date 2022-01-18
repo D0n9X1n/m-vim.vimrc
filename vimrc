@@ -643,6 +643,5 @@ set foldlevel=99
 au BufWinLeave *.* silent mkview
 au BufWinEnter *.* silent loadview
 
-
 " Quick git push for OJ Game
 map <leader>g :!git add . && git commit -am "%" && git pull origin master && git push origin master<CR>
