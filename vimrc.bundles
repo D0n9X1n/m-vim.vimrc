@@ -31,6 +31,7 @@ filetype off " required! turn off
 Plug 'editorconfig/editorconfig-vim'
 
 " color theme
+Plug 'arcticicestudio/nord-vim'
 Plug 'MOSconfig/gruvbox'
 Plug 'altercation/solarized'
 Plug 'altercation/vim-colors-solarized'
@@ -339,9 +340,10 @@ let g:solarized_italics = 0
 " }}}
 
 " airline-theme {{{
+" let g:airline_theme = 'nord'
 " let g:airline_theme = 'solarized'
-let g:airline_theme = 'everforest'
-" let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'everforest'
+let g:airline_theme = 'gruvbox'
 " let g:airline_solarized_bg = 'dark'
 " let g:gruvbox_underline = 1
 " }}}
