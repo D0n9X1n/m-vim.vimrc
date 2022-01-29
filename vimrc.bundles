@@ -339,8 +339,8 @@ let g:solarized_italics = 0
 " }}}
 
 " airline-theme {{{
-let g:airline_theme = 'solarized'
-" let g:airline_theme = 'everforest'
+" let g:airline_theme = 'solarized'
+let g:airline_theme = 'everforest'
 " let g:airline_theme = 'gruvbox'
 " let g:airline_solarized_bg = 'dark'
 " let g:gruvbox_underline = 1

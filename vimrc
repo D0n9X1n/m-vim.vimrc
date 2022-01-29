@@ -582,14 +582,14 @@ endif
 set background=dark
 
 " high, low, flat, none
-colorscheme solarized8_flat
+" colorscheme solarized8_flat
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
-" let g:everforest_background = 'hard'
-" colorscheme everforest
+let g:everforest_background = 'hard'
+colorscheme everforest
 " colorscheme solarized
-" let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_contrast_dark='medium'
 " colorscheme gruvbox
 
 " Set extra options when running in GUI mode
