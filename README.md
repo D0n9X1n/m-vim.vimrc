@@ -51,8 +51,5 @@ npm install jslint -g
 ### Usage
 See @[Usage.md](./doc/Usage.md)
 
-### TODO
-See @[TODO.md](./TODO.md)
-
 ### License
 See @[License](./LICENSE)
