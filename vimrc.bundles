@@ -38,6 +38,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
 Plug 'lifepillar/vim-solarized8'
+Plug 'ayu-theme/ayu-vim'
+Plug 'joshdick/onedark.vim'
 
 " solidity
 Plug 'tomlion/vim-solidity'
