@@ -584,7 +584,7 @@ set background=dark
 " colorscheme nord
 " ==================================
 " high, low, flat, none
-colorscheme solarized8_flat
+" colorscheme solarized8_flat
 " ==================================
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
@@ -592,8 +592,8 @@ colorscheme solarized8_flat
 " let g:everforest_background = 'hard'
 " colorscheme everforest
 " ==================================
-" let g:gruvbox_contrast_dark='medium'
-" colorscheme gruvbox
+let g:gruvbox_contrast_dark='medium'
+colorscheme gruvbox
 " ==================================
 " let ayucolor="light"  " for light version of theme
 " let ayucolor="mirage" " for mirage version of theme
