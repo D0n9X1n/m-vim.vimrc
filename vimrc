@@ -592,13 +592,14 @@ set background=dark
 " let g:everforest_background = 'hard'
 " colorscheme everforest
 " ==================================
-" let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='medium'
+" let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 " ==================================
-" let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
+" for light, mirage, dark version of theme
+" let ayucolor="light"
+" let ayucolor="mirage"
+" let ayucolor="dark"
 " colorscheme ayu
 " ==================================
 " colorscheme onedark
