@@ -592,9 +592,9 @@ set background=dark
 " let g:everforest_background = 'hard'
 " colorscheme everforest
 " ==================================
-let g:gruvbox_contrast_dark='medium'
+" let g:gruvbox_contrast_dark='medium'
 " let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+" colorscheme gruvbox
 " ==================================
 " for light, mirage, dark version of theme
 " let ayucolor="light"
@@ -603,6 +603,13 @@ colorscheme gruvbox
 " colorscheme ayu
 " ==================================
 " colorscheme onedark
+" ==================================
+" let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_foreground = 'material'
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_background = 'medium'
+let g:airline_theme = 'gruvbox_material'
+colorscheme gruvbox-material
 
 " Set extra options when running in GUI mode
 if has("gui_running")

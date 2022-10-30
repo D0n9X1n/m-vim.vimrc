@@ -40,6 +40,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'lifepillar/vim-solarized8'
 Plug 'ayu-theme/ayu-vim'
 Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/gruvbox-material'
+
 
 " solidity
 Plug 'tomlion/vim-solidity'
@@ -345,7 +347,7 @@ let g:solarized_italics = 0
 " let g:airline_theme = 'nord'
 " let g:airline_theme = 'solarized'
 " let g:airline_theme = 'everforest'
-let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'gruvbox'
 " let g:airline_theme = 'ayu'
 " let g:airline_solarized_bg = 'dark'
 " let g:gruvbox_underline = 1
@@ -418,14 +420,14 @@ let g:tagbar_autofocus = 1
 " for ruby
 let g:tagbar_type_ruby = {
             \ 'kinds' : [
-                \ 'm:modules',
-                \ 'c:classes',
-                \ 'd:describes',
-                \ 'C:contexts',
-                \ 'f:methods',
-                \ 'F:singleton methods'
-                \ ]
-                \ }
+            \ 'm:modules',
+            \ 'c:classes',
+            \ 'd:describes',
+            \ 'C:contexts',
+            \ 'f:methods',
+            \ 'F:singleton methods'
+            \ ]
+            \ }
 let g:tagbar_iconchars = ['▸', '▾']
 let g:tagbar_width = 35
 " }}}
