@@ -605,7 +605,7 @@ set background=dark
 " colorscheme onedark
 " ==================================
 " let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_foreground = 'material'
+let g:gruvbox_material_foreground = 'dimmed'
 let g:gruvbox_material_better_performance = 1
 let g:gruvbox_material_background = 'medium'
 let g:airline_theme = 'gruvbox_material'
