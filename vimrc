@@ -324,11 +324,11 @@ nnoremap <leader>b :call SetBGColor()<CR>
 nnoremap <F2> :Autoformat<CR>
 nnoremap <F3> :Autoformat<CR>
 nnoremap <leader>af :Autoformat<CR>
-" 换行开关
-" nnoremap <F4> :set wrap! wrap?<CR>
+" F4 换行开关
+nnoremap <F4> :set wrap! wrap?<CR>
 nnoremap <leader>wr :set wrap! wrap?<CR>
-" F4, F5 快速运行
-nnoremap <F4> :QuickRun<cr>
+" F5 快速运行
+" nnoremap <F4> :QuickRun<cr>
 nnoremap <F5> :QuickRun<cr>
 nnoremap <leader>run :QuickRun<cr>
 " F6 开关相对行号

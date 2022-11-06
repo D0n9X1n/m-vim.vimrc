@@ -441,7 +441,7 @@ map <leader>s :Ag
 " }}}
 
 " indentLine.vim {{{
-let g:indentLine_enabled = 0
+let g:indentLine_enabled = 1
 " }}}
 
 " minibufexpl {{{
