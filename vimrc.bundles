@@ -19,13 +19,19 @@ filetype off " required! turn off
 " vim plugin bundle control, command model
 " ----------------------------------------------------------------------------
 
-" " Typescript
-" " provides syntax files for highlighting .ts and .d.ts files.
-" Plug 'leafgarland/typescript-vim'
-" " provides more syntax highlighting and DOM keywords.
-" Plug 'HerringtonDarkholme/yats.vim'
-" " Auto completion
-" Plug 'Quramy/tsuquyomi'
+" Typescript
+" provides syntax files for highlighting .ts and .d.ts files.
+Plug 'leafgarland/typescript-vim'
+" JavaScript support
+Plug 'pangloss/vim-javascript'
+" GraphQL syntax
+Plug 'jparise/vim-graphql'
+" JS and JSX syntax
+Plug 'maxmellon/vim-jsx-pretty'
+" provides more syntax highlighting and DOM keywords.
+Plug 'HerringtonDarkholme/yats.vim'
+" Auto completion
+Plug 'Quramy/tsuquyomi'
 
 " JS formatter
 Plug 'editorconfig/editorconfig-vim'
@@ -496,7 +502,7 @@ autocmd FileType html,css EmmetInstall
 " }}}
 
 " vim-autoformat {{{
-let g:autoformat_verbosemode = 0
+let g:autoformat_verbosemode = 1
 " }}}
 
 " gruvbox {{{
@@ -522,9 +528,9 @@ let g:EasyGrepIgnoreCase = 0
 " }}}
 
 " Quramy/tsuquyomi {{{
-" if !exists("g:ycm_semantic_triggers")
-" let g:ycm_semantic_triggers = {}
-" endif
-" let g:ycm_semantic_triggers['typescript'] = ['.']
+if !exists("g:ycm_semantic_triggers")
+    let g:ycm_semantic_triggers = {}
+endif
+    let g:ycm_semantic_triggers['typescript'] = ['.']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------

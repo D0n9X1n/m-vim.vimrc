@@ -525,6 +525,7 @@ autocmd FileType cpp set ts=2 sw=2 expandtab ai
 autocmd FileType c set ts=2 sw=2 expandtab ai
 autocmd FileType javascript set ts=2 sw=2 expandtab ai
 autocmd FileType java set ts=2 sw=2 expandtab ai
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
 autocmd BufRead,BufNewFile *.part set filetype=html
