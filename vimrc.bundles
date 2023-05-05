@@ -502,7 +502,7 @@ autocmd FileType html,css EmmetInstall
 " }}}
 
 " vim-autoformat {{{
-let g:autoformat_verbosemode = 1
+let g:autoformat_verbosemode = 0
 " }}}
 
 " gruvbox {{{

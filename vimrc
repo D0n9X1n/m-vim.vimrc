@@ -590,8 +590,8 @@ set background=dark
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:everforest_background = 'hard'
-colorscheme everforest
+" let g:everforest_background = 'hard'
+" colorscheme everforest
 " ==================================
 " let g:gruvbox_contrast_dark='medium'
 " let g:gruvbox_contrast_dark='hard'
@@ -601,7 +601,7 @@ colorscheme everforest
 " let ayucolor="light"
 " let ayucolor="mirage"
 " let ayucolor="dark"
-" colorscheme ayu
+colorscheme ayu
 " ==================================
 " colorscheme onedark
 " ==================================
