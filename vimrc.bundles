@@ -38,6 +38,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 " color theme
 Plug 'arcticicestudio/nord-vim'
+Plug 'nordtheme/vim'
 Plug 'MOSconfig/gruvbox'
 Plug 'altercation/solarized'
 Plug 'altercation/vim-colors-solarized'
@@ -47,6 +48,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'ayu-theme/ayu-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'hzchirs/vim-material'
 
 
 " solidity

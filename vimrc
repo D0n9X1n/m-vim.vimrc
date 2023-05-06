@@ -244,7 +244,7 @@ endfunc
 function! SetBGColor()
     if (&background == 'dark')
         set background=light
-        " colorscheme solarized
+    " colorscheme solarized
     else
         set background=dark
         " colorscheme gruvbox
@@ -385,8 +385,8 @@ cnoremap <C-e> <End>
 " 搜索相关
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
-" 进入搜索Use sane regexes"
-nnoremap / /\v
+    " 进入搜索Use sane regexes"
+    nnoremap / /\v
 vnoremap / /\v
 
 " Keep search pattern at the center of the screen.
@@ -600,7 +600,7 @@ set background=dark
 " for light, mirage, dark version of theme
 " let ayucolor="light"
 " let ayucolor="mirage"
-" let ayucolor="dark"
+let ayucolor="dark"
 colorscheme ayu
 " ==================================
 " colorscheme onedark
@@ -611,6 +611,9 @@ colorscheme ayu
 " let g:gruvbox_material_background = 'medium'
 " let g:airline_theme = 'gruvbox_material'
 " colorscheme gruvbox-material
+" ==================================
+" let g:airline_theme='material'
+" colorscheme vim-material
 
 " Set extra options when running in GUI mode
 if has("gui_running")
