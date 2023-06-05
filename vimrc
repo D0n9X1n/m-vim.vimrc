@@ -585,7 +585,7 @@ set background=dark
 " colorscheme nord
 " ==================================
 " high, low, flat, none
-" colorscheme solarized8_flat
+colorscheme solarized8_flat
 " ==================================
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
@@ -600,8 +600,8 @@ set background=dark
 " for light, mirage, dark version of theme
 " let ayucolor="light"
 " let ayucolor="mirage"
-let ayucolor="dark"
-colorscheme ayu
+" let ayucolor="dark"
+" colorscheme ayu
 " ==================================
 " colorscheme onedark
 " ==================================
