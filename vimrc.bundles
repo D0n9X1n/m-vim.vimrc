@@ -74,7 +74,8 @@ Plug 'rking/ag.vim'
 
 " Markdown
 Plug 'MikeCoder/markdown-preview.vim'
-Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 
 " QuickRun
 Plug 'MikeCoder/quickrun.vim'
