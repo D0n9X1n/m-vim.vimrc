@@ -527,9 +527,6 @@ autocmd FileType javascript set ts=2 sw=2 expandtab ai
 autocmd FileType java set ts=2 sw=2 expandtab ai
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
-let g:conceallevel = 0
-let g:indentLine_conceallevel = 0
-
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown
 autocmd BufRead,BufNewFile *.part set filetype=html
 

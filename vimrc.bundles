@@ -451,6 +451,8 @@ map <leader>s :Ag
 
 " indentLine.vim {{{
 let g:indentLine_enabled = 1
+let g:conceallevel = 1
+let g:indentLine_conceallevel = 1
 " }}}
 
 " minibufexpl {{{
@@ -534,6 +536,6 @@ let g:EasyGrepIgnoreCase = 0
 if !exists("g:ycm_semantic_triggers")
     let g:ycm_semantic_triggers = {}
 endif
-    let g:ycm_semantic_triggers['typescript'] = ['.']
+let g:ycm_semantic_triggers['typescript'] = ['.']
 " }}}
 "------------------------------------------- end of configs --------------------------------------------
