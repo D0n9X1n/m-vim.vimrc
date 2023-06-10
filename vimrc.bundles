@@ -74,8 +74,7 @@ Plug 'rking/ag.vim'
 
 " Markdown
 Plug 'MikeCoder/markdown-preview.vim'
-Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
+Plug 'tpope/vim-markdown'
 
 " QuickRun
 Plug 'MikeCoder/quickrun.vim'
@@ -446,13 +445,13 @@ let python_highlight_all = 1
 " }}}
 
 " ag.vim {{{
-map <leader>s :Ag
+map <leader>s :Ag 
 " }}}
 
 " indentLine.vim {{{
+let g:markdown_syntax_conceal = 0
+let g:vim_markdown_conceal = 0
 let g:indentLine_enabled = 1
-let g:conceallevel = 1
-let g:indentLine_conceallevel = 1
 " }}}
 
 " minibufexpl {{{

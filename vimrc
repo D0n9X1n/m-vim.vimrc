@@ -26,7 +26,6 @@ let g:mapleader = ','
 " 开启语法高亮
 syntax on
 
-
 "==========================================
 " Add plugins to &runtimepath
 call plug#begin('~/.vim/bundle')
@@ -116,8 +115,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,.svn,tags
 " 突出显示当前列
 " set cursorcolumn
 " 突出显示当前行
-" set cursorline
-
+set cursorline
 
 " 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
 " 好处：误删什么的，如果以前屏幕打开，可以找回
@@ -166,9 +164,7 @@ set showcmd
 set showmode
 
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
-set scrolloff=10
-
-" set winwidth=79
+set scrolloff=15
 
 " 命令行（在状态行下）的高度，默认为1，这里是2
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
@@ -372,7 +368,6 @@ map <C-l> <C-W>l
 noremap H ^
 noremap L $
 
-
 " Map ; to : and save a million keystrokes 用于快速进入命令行
 nnoremap ; :
 
@@ -415,7 +410,6 @@ nnoremap ]b :bnext<cr>
 " 使用方向键切换buffer
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
-
 
 " tab 操作
 " http://vim.wikia.com/wiki/Alternative_tab_navigation
@@ -538,7 +532,6 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-
 
 " 定义函数AutoSetFileHead，自动插入文件头
 autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
