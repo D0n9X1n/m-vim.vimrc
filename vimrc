@@ -587,7 +587,7 @@ set background=dark
 " colorscheme everforest
 " ==================================
 " let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 " ==================================
 " for light, mirage, dark version of theme
