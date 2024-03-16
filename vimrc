@@ -586,7 +586,7 @@ set background=dark
 " let g:everforest_background = 'hard'
 " colorscheme everforest
 " ==================================
-" let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_contrast_dark='medium'
 " let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 " ==================================
