@@ -577,7 +577,7 @@ set background=dark
 
 " ==================================
 " high/low/flat/
-" colorscheme solarized
+" colorscheme solarized8_flat
 " ==================================
 " colorscheme nord
 " ==================================
