@@ -231,7 +231,7 @@ set norelativenumber number
 " autocmd InsertLeave * :set norelativenumber number
 function! NumberToggle()
     if(&relativenumber == 1)
-        set norelativenumber number
+    set norelativenumber number
     else
         set relativenumber
     endif
@@ -575,10 +575,13 @@ endif
 " theme主题
 set background=dark
 
-" colorscheme nord
 " ==================================
-" high, low, flat, none
-" colorscheme solarized8_flat
+" 'ericbn/vim-solarized'
+let g:solarized_visibility= "high"
+let g:solarized_contrast="high"
+colorscheme solarized
+" ==================================
+" colorscheme nord
 " ==================================
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
@@ -586,9 +589,9 @@ set background=dark
 " let g:everforest_background = 'hard'
 " colorscheme everforest
 " ==================================
-let g:gruvbox_contrast_dark='medium'
+" let g:gruvbox_contrast_dark='medium'
 " let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+" colorscheme gruvbox
 " ==================================
 " for light, mirage, dark version of theme
 " let ayucolor="light"
