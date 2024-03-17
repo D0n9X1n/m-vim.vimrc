@@ -576,10 +576,8 @@ endif
 set background=dark
 
 " ==================================
-" 'ericbn/vim-solarized'
-let g:solarized_visibility= "high"
-let g:solarized_contrast="high"
-colorscheme solarized
+" high/low/flat/
+colorscheme solarized8_flat
 " ==================================
 " colorscheme nord
 " ==================================

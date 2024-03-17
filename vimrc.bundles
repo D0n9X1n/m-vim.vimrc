@@ -37,10 +37,10 @@ Plug 'Quramy/tsuquyomi'
 Plug 'editorconfig/editorconfig-vim'
 
 " color theme
+Plug 'lifepillar/vim-solarized8'
 Plug 'arcticicestudio/nord-vim'
 Plug 'nordtheme/vim'
 Plug 'MOSconfig/gruvbox'
-Plug 'ericbn/vim-solarized'
 Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
 Plug 'ayu-theme/ayu-vim'
