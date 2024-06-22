@@ -38,6 +38,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 " color theme
 Plug 'lifepillar/vim-solarized8'
+Plug 'ericbn/vim-solarized'
 Plug 'arcticicestudio/nord-vim'
 Plug 'nordtheme/vim'
 Plug 'MOSconfig/gruvbox'
