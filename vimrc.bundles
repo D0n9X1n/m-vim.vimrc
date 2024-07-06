@@ -37,17 +37,18 @@ Plug 'Quramy/tsuquyomi'
 Plug 'editorconfig/editorconfig-vim'
 
 " color theme
-Plug 'lifepillar/vim-solarized8'
+" Plug 'lifepillar/vim-solarized8'
 Plug 'ericbn/vim-solarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
-Plug 'nordtheme/vim'
+" Plug 'nordtheme/vim'
 Plug 'MOSconfig/gruvbox'
-Plug 'sainnhe/everforest'
-Plug 'sheerun/vim-polyglot'
-Plug 'ayu-theme/ayu-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'sainnhe/gruvbox-material'
-Plug 'hzchirs/vim-material'
+" Plug 'sainnhe/everforest'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'ayu-theme/ayu-vim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'sainnhe/gruvbox-material'
+" Plug 'hzchirs/vim-material'
 
 
 " solidity

@@ -115,7 +115,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,.svn,tags
 " 突出显示当前列
 " set cursorcolumn
 " 突出显示当前行
-" set cursorline
+set cursorline
 
 " 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
 " 好处：误删什么的，如果以前屏幕打开，可以找回
@@ -609,9 +609,8 @@ set background=dark
 " let g:airline_theme='material'
 " colorscheme vim-material
 " ==================================
-" colorscheme solarized
-" ==================================
 colorscheme solarized
+let g:solarized_termcolors=256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
