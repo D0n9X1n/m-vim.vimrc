@@ -19,8 +19,10 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.vimrc.bundles; do [ -L $i 
 
 
 echo "Step2: setting up symlinks"
+touch vimrc.private
 lnif $CURRENT_DIR/vimrc $HOME/.vimrc
 lnif $CURRENT_DIR/vimrc.bundles $HOME/.vimrc.bundles
+lnif $CURRENT_DIR/vimrc.private $HOME/.vimrc.private
 lnif "$CURRENT_DIR/" "$HOME/.vim"
 
 touch "$HOME/.vimrc.private"
