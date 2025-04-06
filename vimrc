@@ -579,6 +579,7 @@ set background=dark
 " high/low/flat/
 " colorscheme solarized8_low
 colorscheme solarized
+set termguicolors
 let g:solarized_termcolors=256
 " ==================================
 " colorscheme nord
