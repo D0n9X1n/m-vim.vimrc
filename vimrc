@@ -578,6 +578,8 @@ set background=dark
 " ==================================
 " high/low/flat/
 " colorscheme solarized8_low
+colorscheme solarized
+let g:solarized_termcolors=256
 " ==================================
 " colorscheme nord
 " ==================================
@@ -587,9 +589,9 @@ set background=dark
 " let g:everforest_background = 'hard'
 " colorscheme everforest
 " ==================================
-let g:gruvbox_contrast_dark='medium'
+" let g:gruvbox_contrast_dark='medium'
 " let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+" colorscheme gruvbox
 " ==================================
 " for light, mirage, dark version of theme
 " let ayucolor="light"
@@ -609,8 +611,6 @@ colorscheme gruvbox
 " let g:airline_theme='material'
 " colorscheme vim-material
 " ==================================
-" colorscheme solarized
-" let g:solarized_termcolors=256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
