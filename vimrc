@@ -578,17 +578,17 @@ set background=dark
 " ==================================
 " high/low/flat/
 " colorscheme solarized8_low
-colorscheme solarized
-set termguicolors
-let g:solarized_termcolors=256
+" colorscheme solarized
+" set termguicolors
+" let g:solarized_termcolors=256
 " ==================================
 " colorscheme nord
 " ==================================
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
-" let g:everforest_background = 'hard'
-" colorscheme everforest
+let g:everforest_background = 'medium'
+colorscheme everforest
 " ==================================
 " let g:gruvbox_contrast_dark='medium'
 " let g:gruvbox_contrast_dark='hard'
