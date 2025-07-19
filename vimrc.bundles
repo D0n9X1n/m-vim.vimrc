@@ -26,8 +26,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 " GraphQL syntax
 Plug 'jparise/vim-graphql'
-" JS and JSX syntax
-Plug 'maxmellon/vim-jsx-pretty'
 " provides more syntax highlighting and DOM keywords.
 Plug 'HerringtonDarkholme/yats.vim'
 " Auto completion
@@ -37,18 +35,11 @@ Plug 'Quramy/tsuquyomi'
 Plug 'editorconfig/editorconfig-vim'
 
 " color theme
-" Plug 'lifepillar/vim-solarized8'
-Plug 'ericbn/vim-solarized'
-Plug 'altercation/vim-colors-solarized'
-Plug 'arcticicestudio/nord-vim'
-" Plug 'nordtheme/vim'
+Plug 'MOSconfig/vim-solarized8'
 Plug 'MOSconfig/gruvbox'
+Plug 'chriskempson/base16-vim'
 Plug 'sainnhe/everforest'
-" Plug 'sheerun/vim-polyglot'
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'joshdick/onedark.vim'
-" Plug 'sainnhe/gruvbox-material'
-" Plug 'hzchirs/vim-material'
+Plug 'ayu-theme/ayu-vim'
 
 
 " solidity
