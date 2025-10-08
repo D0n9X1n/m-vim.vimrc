@@ -577,9 +577,9 @@ set background=dark
 
 " ==================================
 " high/low/flat/
-colorscheme solarized8_flat
-set termguicolors
-let g:solarized_termcolors=256
+" colorscheme solarized8_flat
+" set termguicolors
+" let g:solarized_termcolors=256
 " ==================================
 " colorscheme nord
 " ==================================
@@ -590,8 +590,8 @@ let g:solarized_termcolors=256
 " colorscheme everforest
 " ==================================
 " let g:gruvbox_contrast_dark='medium'
-" let g:gruvbox_contrast_dark='hard'
-" colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 " ==================================
 " for light, mirage, dark version of theme
 " let ayucolor="light"
