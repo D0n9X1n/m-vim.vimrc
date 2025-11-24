@@ -489,7 +489,7 @@ endif
 
 set background=dark
 
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='light'
 colorscheme gruvbox
 
 " GUI-specific settings
